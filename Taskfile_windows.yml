@@ -1,0 +1,46 @@
+# https://taskfile.dev
+
+version: '2'
+
+tasks:
+  build:
+    cmds:
+      - powershell -command "cd website; hugo"
+    silent: true
+
+  dev:
+    cmds:
+      - powershell -command "cd website; hugo server"
+    silent: true
+
+  reset:
+    cmds:
+      - powershell -command "rm -recurse -force ./website"
+
+  init:
+    cmds:
+      # create initial folder structure
+      - powershell -command "hugo new site website"
+      # create additional folders
+      - powershell -command "mkdir ./website/assets; mkdir ./website/assets/sass; mkdir ./website/assets/js"
+      # load fomantic-sass
+      - powershell -command "git clone https://github.com/fomantic/Fomantic-UI-SASS"
+      # checkout to version-tag
+      - powershell -command "cd ./Fomantic-UI-SASS; git checkout tags/v{{ .version_semantic }} --quiet"
+      # copy sass-files from downloaded repo to local website
+      - powershell -command "cp -recurse ./Fomantic-UI-SASS/app/assets/stylesheets/* ./website/assets/sass/"
+      # remove sass-repo-folder as it is no longer required
+      - powershell -command "rm -recurse -force ./Fomantic-UI-SASS"
+      # get jquery-js in specified version
+      #- powershell -command "wget https://cdn.jsdelivr.net/npm/jquery@{{ .version_jquery }}/dist/jquery.js -O ./website/assets/js/jquery_{{ .version_jquery }}.js"
+      # get minified jquery-js in specified version
+      #- powershell -command "wget https://cdn.jsdelivr.net/npm/jquery@{{ .version_jquery }}/dist/jquery.min.js -O ./website/assets/js/jquery_{{ .version_jquery }}.min.js"
+      # get semantic-js in specified version
+      #- powershell -command "wget https://cdn.jsdelivr.net/npm/fomantic-ui@{{ .version_semantic }}/dist/semantic.js -O ./website/assets/js/semantic_{{ .version_semantic }}.js"
+      # get minified semantic-js in specified version
+      #- powershell -command "wget https://cdn.jsdelivr.net/npm/fomantic-ui@{{ .version_semantic }}/dist/semantic.min.js -O ./website/assets/js/semantic_{{ .version_semantic }}.min.js"
+      # create an empty main.js file (ni == New-Item)
+      - powershell -command "ni ./website/assets/js/main.js"
+      # copy created demo-layouts from root folder to website folder
+      - powershell -command "cp -recurse -force ./layouts ./website/"
+    silent: true
