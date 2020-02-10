@@ -1,10 +1,10 @@
 ---
 title: RaHoff
 ---
-# Hier können Sie meine handgearbeiteten Silberringe ansehen und käuflich erwerben.
+# Hier können Sie meine handgearbeiteten Silberringe ansehen.
 
 Es handelt sich bei meinen Ringen um jeweils handgearbeitete, neue Silberringe, geschmiedet, massiv - jeder Ring ein Unikat.
-Ihr Ring wird auf Ihre Bestellung hin von mir ganz nach Ihren Wünschen angefertigt (Größe, Breite, Dicke).
+Die Größe, Breite und Dicke des verwendeten Materials ist dabei individuell variierbar.
 
 Jeder Ring erfährt durch die spezielle Herstellung einen besonders schönen, bleibenden Glanz und Glitzereffekt.
 
