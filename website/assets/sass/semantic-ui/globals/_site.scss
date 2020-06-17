@@ -101,11 +101,11 @@ p:last-child {
 --------------------*/
 
 a {
-  color: #4183C4;
+  color: #0202FF;
   text-decoration: none;
 }
 a:hover {
-  color: #1e70bf;
+  color: #0202FF;
   text-decoration: none;
 }
 
@@ -263,4 +263,12 @@ h1 {
 }
 #footer > .listitem {
   margin-left: 1.75rem;
+}
+
+//list-view
+a > p {
+  color: rgba(0, 0, 0, 0.87);
+}
+h3 {
+  color: #0202FF;
 }

@@ -5,7 +5,9 @@ Angaben gemäß § 5 TMG
 ## Verantwortlich
 
 Rainer Hoffmann
+
 Mittelweg 10
+
 88483 Burgrieden
 
 ## Kontakt

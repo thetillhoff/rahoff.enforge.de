@@ -1,3 +1,6 @@
+---
+title: Datenschutz
+---
 # Datenschutz
 
 Beim Aufrufen dieser Webseite werden automatisch folgende Daten gespeichert:
