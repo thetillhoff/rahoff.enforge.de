@@ -21,3 +21,5 @@ menu:
       name: "Elektroauto"
       weight: 100
       url: "/ecar/"
+
+summaryLength: 20
