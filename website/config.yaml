@@ -12,7 +12,7 @@ menu:
     - identifier: "pictures"
       name: "Bilder"
       weight: 20
-      url: "/art/"
+      url: "/pictures/"
     - identifier: "sculptures"
       name: "Skulpturen"
       weight: 30
