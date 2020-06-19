@@ -9,10 +9,10 @@ menu:
       name: "Schmuck"
       weight: 10
       url: "/jewellery/"
-    - identifier: "artworks"
-      name: "Kunstwerke"
+    - identifier: "pictures"
+      name: "Bilder"
       weight: 20
-      url: "/artworks/"
+      url: "/art/"
     - identifier: "sculptures"
       name: "Skulpturen"
       weight: 30
