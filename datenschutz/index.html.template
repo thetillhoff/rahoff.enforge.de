@@ -1,0 +1,5 @@
+{{ define "page" -}}
+<div class="center vertical spaced">
+  <span>Almost nothing to see here.</span>
+</div>
+{{- end }}

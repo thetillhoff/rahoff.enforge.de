@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>enforge.de</title>
+    <title>{{ .title }}</title>
 
     <!-- style -->
     <!-- normally, normalize would be optimally loaded by the following line - but because I want this integrated in the critical css, its disabled -->
