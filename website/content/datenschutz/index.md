@@ -3,7 +3,7 @@ title: Datenschutz
 ---
 # Datenschutz
 
-Beim Aufrufen dieser Webseite werden automatisch folgende Daten gespeichert:
+Beim Aufrufen dieser Webseite werden automatisch folgende Daten beim Hosting-Provider gespeichert:
 
 - Ihre IP-Adresse
 - Datum und Uhrzeit Ihres Zugriffs

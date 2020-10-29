@@ -5,21 +5,21 @@ sectionPagesMenu: "main"
 
 menu:
   main:
-    - identifier: "jewellery"
+    - identifier: "schmuck"
       name: "Schmuck"
       weight: 10
-      url: "/jewellery/"
-    - identifier: "pictures"
+      url: "/schmuck/"
+    - identifier: "bilder"
       name: "Bilder"
       weight: 20
-      url: "/pictures/"
-    - identifier: "sculptures"
+      url: "/bilder/"
+    - identifier: "skulpturen"
       name: "Skulpturen"
       weight: 30
-      url: "/sculptures/"
-    - identifier: "ecar"
+      url: "/skulpturen/"
+    - identifier: "eauto"
       name: "Elektroauto"
       weight: 100
-      url: "/ecar/"
+      url: "/eauto/"
 
 summaryLength: 20

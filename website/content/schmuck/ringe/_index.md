@@ -2,8 +2,8 @@
 title: Ringe
 menu:
   main:
-    parent: "jewellery"
+    parent: "schmuck"
     weight: 10
 ---
 
-rings
+ringe

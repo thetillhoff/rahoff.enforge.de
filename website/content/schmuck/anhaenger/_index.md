@@ -2,8 +2,8 @@
 title: Anhänger
 menu:
   main:
-    parent: "jewellery"
+    parent: "schmuck"
     weight: 30
 ---
 
-trinkets
+anhaenger

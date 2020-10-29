@@ -2,4 +2,4 @@
 title: Bilder
 ---
 
-pictures
+bilder

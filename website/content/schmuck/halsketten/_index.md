@@ -2,8 +2,8 @@
 title: Halsketten
 menu:
   main:
-    parent: "jewellery"
+    parent: "schmuck"
     weight: 20
 ---
 
-necklaces
+halsketten

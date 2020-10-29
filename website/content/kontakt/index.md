@@ -2,4 +2,4 @@
 title: Kontakt
 ---
 
-contact
+kontakt
