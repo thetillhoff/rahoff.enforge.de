@@ -1,3 +1,19 @@
 # https://taskfile.dev
 
-version: '2'
+version: '3'
+
+silent: true
+
+tasks:
+  build:
+    cmds:
+      - "../temingo/temingo{{ .EXTENSION }} -values values.yaml -inputDir . -partialsDir partials -outputDir output -templateFileExtension .html.template -partialFileExtension .template -generatedFileExtension .html"
+    vars:
+      EXTENSION: '{{ if eq OS "windows" }}.exe{{ end }}'
+
+  serve:
+    dir: output
+    cmds:
+      - "../../serve/serve{{ .EXTENSION }}"
+    vars:
+      EXTENSION: '{{ if eq OS "windows" }}.exe{{ end }}'

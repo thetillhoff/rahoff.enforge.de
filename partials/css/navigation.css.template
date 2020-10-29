@@ -1,0 +1,55 @@
+{{ define "navigation.css" -}}
+.navigation {
+  width: 100%;
+
+  color: hsla({{ .css.colors.siteColor.hue }}, {{ .css.colors.siteColor.saturation }}, {{ .css.colors.siteBgColor.lightness }}, {{ .css.colors.siteColor.alpha }});  
+  background-color: hsla({{ .css.colors.siteColor.hue }}, {{ .css.colors.siteColor.saturation }}, {{ .css.colors.siteColor.lightness }}, {{ .css.colors.siteColor.alpha }});
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.navigation > .container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.navigation .element {
+  padding: calc(2* {{ .css.navigation.padding }});
+
+  {{ $navigationBorderColorHue := 0 -}}
+  {{ $navigationBorderColorSaturation := "0%" -}}
+  {{ $navigationBorderColorLightness := "20%" -}}
+  {{ $navigationBorderColorAlpha := 1 -}}
+  border-color: hsla({{ $navigationBorderColorHue }}, {{ $navigationBorderColorSaturation }}, {{ $navigationBorderColorLightness }}, {{ $navigationBorderColorAlpha }});
+
+  border-style: solid;
+  border-width: {{ .css.borders.width }};
+  border-top: none;
+  border-bottom: none;
+  border-right: none; /* goes together with .navigation.element:first-child */
+}
+.navigation.element:first-child {
+  border-left: none;
+}
+.navigation.element:hover {
+  background-color: hsla({{ .css.colors.siteColor.hue }}, {{ .css.colors.siteColor.saturation }}, {{ addPercentage "10%" .css.colors.siteColor.lightness }}, {{ .css.colors.siteColor.alpha }});
+}
+
+@media only screen and (min-width:768px) {
+  .navigation {
+    order: -1;
+  }
+
+  .navigation > .container {
+    max-width: 1092px; /* 95% of 1150 */
+  }
+
+  .navigation .element {
+    padding: {{ .css.navigation.padding }};
+  }
+}
+{{- end }}

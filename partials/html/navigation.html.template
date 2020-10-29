@@ -1,0 +1,8 @@
+{{ define "navigation.html" -}}
+<div class="navigation">
+  <div class="container">
+    <a href="/" class="grouped nolink navigation element" >enforge.de</a>
+    <a href="/till.hoffmann/" class="grouped nolink navigation element" >Till Hoffmann</a>
+  </div>
+</div>
+{{- end }}

@@ -1,0 +1,25 @@
+{{ define "page" -}}
+<div class="center vertical spaced">
+  <span>Hey there! I'm Till.</span>
+
+  <div class="buttons">
+    <a class="big inverted icon button" href="https://github.com/tillhoff">
+      <svg viewBox="0 0 24 24">
+        <use xlink:href="#github"></use>
+      </svg>
+    </a>
+
+    <a class="big inverted icon button" href="https://xing.com/profile/Till_Hoffmann21">
+      <svg viewBox="0 0 24 24">
+        <use xlink:href="#xing"></use>
+      </svg>
+    </a>
+
+    <a class="big inverted icon button" href="https://linkedin.com/in/tillhoff">
+      <svg viewBox="0 0 24 24">
+        <use xlink:href="#linkedin"></use>
+      </svg>
+    </a>
+  </div>
+</div>
+{{- end }}

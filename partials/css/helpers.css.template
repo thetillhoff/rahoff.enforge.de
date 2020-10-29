@@ -1,0 +1,50 @@
+{{ define "helpers.css" -}}
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 95vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+.vertical.spaced > * {
+  margin-top: 1rem;
+}
+.vertical.spaced > *:first-child {
+  margin-top: 0;
+}
+.spaced:not(.vertical) > * {
+  margin-left: 1rem;
+}
+.spaced:not(.vertical) > *:first-child {
+  margin-left: 0;
+}
+
+.fill {
+  display: flex;
+  justify-content: space-around;
+}
+
+a.nolink,
+a.nolink:hover,
+a.nolink:active,
+a.nolink:visited {
+  text-decoration: none;
+}
+
+@media only screen and (min-width:1150px) {
+  .container {
+    max-width: 1092px; /* 95% of 1150 */
+  }
+}
+{{- end }}

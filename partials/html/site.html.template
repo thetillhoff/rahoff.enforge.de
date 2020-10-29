@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>enforge.de</title>
+
+    <!-- style -->
+    <!-- normally, normalize would be optimally loaded by the following line - but because I want this integrated in the critical css, its disabled -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" onerror="this.onerror=null;this.href="/normalize.min.css"> -->
+    <style>
+{{ include "critical.css" . | nindent 4 | safecss }}
+    </style>
+    <!-- <link rel="stylesheet" href="/main.css"> -->
+
+    <!-- javascript -->
+    <!-- if ever needed, integrate javascript inline as well to reduce number of blocking calls -->
+    <!-- <script type="text/javascript" src="/main.js"></script> -->
+  </head>
+  <body>
+
+{{ include "svgs.html" . | nindent 4 | safehtml }}
+
+    <div class="center page">
+{{ include "page" . | nindent 6 | safehtml }}
+    </div>
+
+{{ include "navigation.html" . | nindent 4 | safehtml }}
+
+  </body>
+</html>
