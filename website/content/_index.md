@@ -1,5 +1,5 @@
 ---
-title: RaHoff
+title: Rahoff
 ---
 # Hier können Sie meine handgearbeiteten Silberringe ansehen.
 

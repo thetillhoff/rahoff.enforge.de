@@ -2,7 +2,7 @@ $scale = 1
 
 $svg = "<svg width=`"$($scale*120)`" height=`"$($scale*48)`" xmlns=`"http://www.w3.org/2000/svg`">
  <g>
-  <title>RaHoff Logo</title>
+  <title>Rahoff Logo</title>
   <rect fill=`"#0202FF`" stroke=`"#000`" stroke-width=`"0`" stroke-opacity=`"null`" fill-opacity=`"null`" x=`"$($scale*  0)`" y=`"$($scale*  0)`" width=`"$($scale*  4)`" height=`"$($scale* 48)`" id=`"svg_1`"/>
   <rect fill=`"#0202FF`" stroke=`"#000`" stroke-width=`"0`" stroke-opacity=`"null`" fill-opacity=`"null`" x=`"$($scale*  8)`" y=`"$($scale*  0)`" width=`"$($scale* 16)`" height=`"$($scale*  8)`" id=`"svg_2`"/>
   <rect fill=`"#0202FF`" stroke=`"#000`" stroke-width=`"0`" stroke-opacity=`"null`" fill-opacity=`"null`" x=`"$($scale* 24)`" y=`"$($scale*  8)`" width=`"$($scale*  8)`" height=`"$($scale*  8)`" id=`"svg_3`"/>
