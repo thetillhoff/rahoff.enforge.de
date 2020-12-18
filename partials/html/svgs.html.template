@@ -1,5 +1,57 @@
 {{ define "svgs.html" -}}
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;"><path id="github" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;"><path id="xing" d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;"><path id="linkedin" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+<svg viewBox="0 0 120 48" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+ <g id="rahoffsvg">
+  <title>Rahoff Logo</title>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="0" y="0" width="4" height="48" id="svg_1"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="8" y="0" width="16" height="8" id="svg_2"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="24" y="8" width="8" height="8" id="svg_3"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="16" y="16" width="8" height="8" id="svg_4"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="8" y="24" width="8" height="8" id="svg_5"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="16" y="32" width="8" height="8" id="svg_6"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="24" y="40" width="8" height="8" id="svg_7"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="36" y="32" width="2" height="16" id="svg_8"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="38" y="28" width="4" height="4" id="svg_9"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="38" y="40" width="4" height="4" id="svg_10"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="42" y="32" width="4" height="16" id="svg_11"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="50" y="0" width="4" height="48" id="svg_12"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="58" y="24" width="16" height="6" id="svg_13"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="74" y="0" width="8" height="48" id="svg_14"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="88" y="28" width="4" height="4" id="svg_15"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="86" y="32" width="2" height="12" id="svg_16"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="88" y="44" width="4" height="4" id="svg_17"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="92" y="32" width="4" height="12" id="svg_18"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="100" y="28" width="2" height="20" id="svg_19"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="104" y="28" width="4" height="4" id="svg_20"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="104" y="36" width="4" height="4" id="svg_21"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="112" y="28" width="2" height="20" id="svg_22"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="116" y="28" width="4" height="4" id="svg_23"/>
+  <rect fill="#0202FF" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="116" y="36" width="4" height="4" id="svg_24"/>
+ </g>
+</svg>
+<svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+ <g id="hamburgersvg">
+  <rect stroke-width="0" fill-opacity="null" x="0" y="0" width="25" height="5" rx="2.5"/>
+  <rect stroke-width="0" fill-opacity="null" x="0" y="10" width="25" height="5" rx="2.5"/>
+  <rect stroke-width="0" fill-opacity="null" x="0" y="20" width="25" height="5" rx="2.5"/>
+ </g>
+</svg>
+<svg viewBox="0 0 112.0461 127.84434" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <g id="handsvg">
+    <path d="m 10.113048,52.703188 c 3.248651,-0.540583 6.322189,0.216665 10.732151,3.156723 4.409962,2.940054 10.155979,8.062474 15.902274,13.185144 C 35.188401,48.554391 33.62935,28.064009 33.941162,16.459905 34.252975,4.8558012 36.435633,2.1386142 38.930339,1.7823662 c 2.494706,-0.356248 5.30098,1.648233 7.973572,11.3369688 2.672593,9.688735 5.211559,27.060611 7.75062,44.43313 C 55.36725,40.046311 56.079958,22.540409 57.861794,12.517643 59.643634,2.4948772 62.494454,-0.04413385 65.189564,5.7715325e-4 67.884684,0.04528715 70.423694,2.6733872 71.670814,12.295255 c 1.24713,9.621867 1.20259,26.236525 1.15804,42.85178 3.29633,-14.833457 6.59254,-29.666421 9.5103,-38.197026 2.91776,-8.5306048 5.45677,-10.7578078 7.61731,-10.4904008 2.16054,0.267407 3.94231,3.029138 3.65267,11.9158328 -0.28964,8.886696 -2.65049,23.898116 -5.01137,38.909754 4.98903,-11.269866 9.978,-22.539606 13.630776,-28.798266 3.65278,-6.258661 5.96908,-7.505898 7.66184,-7.171609 1.69275,0.334289 2.76181,2.24968 1.78168,10.312396 -0.98013,8.062716 -4.00912,22.272258 -6.03591,34.455419 -2.0268,12.18315 -3.05131,22.33919 -4.58814,32.29506 -1.536826,9.955875 -3.585806,19.710815 -5.634876,29.466155 0,0 -53.988447,-0.13363 -53.988447,-0.13363 C 35.901117,114.74815 30.377795,101.78615 23.47367,89.989255 16.569545,78.192365 8.284659,67.561155 0,56.930235 3.429263,55.088579 6.864396,53.24377 10.113048,52.703188 Z"/>
+  </g>
+</svg>
+<svg viewBox="0 0 179.86867 149.88343" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <g id="heartsvg">
+    <path d="M 89.93447,149.88346 C 49.993755,116.67091 10.053325,83.458605 1.7322002,55.227822 -6.5889253,26.99704 16.709358,3.7487234 36.680246,0.42753441 56.651134,-2.8936546 73.292504,13.712023 89.93447,30.318296 106.57643,13.712023 123.21807,-2.8939205 143.18895,0.42753036 163.15983,3.7489813 186.45765,26.996835 178.13639,55.227923 169.81512,83.459012 129.8752,116.6709 89.93447,149.88346"/>
+  </g>
+</svg>
+<svg viewBox="0 0 98.085503 92.904022" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <g id="blingsvg" transform="translate(-40.676071,-52.265993)">
+    <path d="m 83,55 8,30 30,8.000004 L 91,101 83,131 75,101 v 0 L 45.165361,93.850446 75,85 Z" />
+    <path d="m 138.64194,52.38563 -10.2491,17.65469 10.16499,17.606014 -17.606,-10.165002 -17.6547,10.249106 10.2491,-17.654706 v 0 l -10.48397,-17.133954 17.92498,9.692942 z" />
+    <path d="m 76.376911,109.70557 -10.2491,17.65469 10.16499,17.60602 -17.606,-10.165 -17.6547,10.2491 10.2491,-17.6547 v 0 l -10.48397,-17.13396 17.92498,9.69294 z" />
+    <path d="m 68.437859,64.349617 -5.7138,9.973143 5.66692,9.945649 -9.81523,-5.742215 -9.84238,5.789725 5.71381,-9.973151 v 0 l -5.84474,-9.678983 9.99305,5.475549 z" />
+    <path d="m 107.43598,119.47369 -5.7138,9.97315 5.66692,9.94565 -9.815229,-5.74222 -9.84238,5.78973 5.71381,-9.97315 v 0 l -5.84474,-9.67899 9.99305,5.47555 z" />
+  </g>
+</svg>
 {{- end }}

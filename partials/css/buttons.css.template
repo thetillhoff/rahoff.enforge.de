@@ -76,12 +76,6 @@ button.primary,
   color: hsla({{ .css.colors.primaryColor.hue }},{{ .css.colors.primaryColor.saturation }},{{ .css.colors.primaryColor.lightness }},{{ .css.colors.primaryColor.alpha }});
   background-color: hsla({{ .css.colors.primaryBgColor.hue }},{{ .css.colors.primaryBgColor.saturation }},{{ .css.colors.primaryBgColor.lightness }},{{ .css.colors.primaryBgColor.alpha }});
 }
-/* secondary button styling */
-button.secondary,
-.secondary.button {
-  color: hsla({{ .css.colors.secondaryColor.hue }},{{ .css.colors.secondaryColor.saturation }},{{ .css.colors.secondaryColor.lightness }},{{ .css.colors.secondaryColor.alpha }});
-  background-color: hsla({{ .css.colors.secondaryBgColor.hue }},{{ .css.colors.secondaryBgColor.saturation }},{{ .css.colors.secondaryBgColor.lightness }},{{ .css.colors.secondaryBgColor.alpha }});
-}
 
 /* hover button styling */
 button:hover,
@@ -99,14 +93,6 @@ button.primary:hover,
 button.primary.inverted:hover,
 .button.primary.inverted:hover {
   background-color: hsla({{ .css.colors.primaryColor.hue }}, {{ .css.colors.primaryColor.saturation }}, {{ addPercentage "20%" .css.colors.primaryColor.lightness }}, {{ .css.colors.primaryColor.alpha }});  
-}
-button.secondary:hover,
-.button.secondary:hover {
-  background-color: hsla({{ .css.colors.secondaryBgColor.hue }}, {{ .css.colors.secondaryBgColor.saturation }}, {{ addPercentage "20%" .css.colors.secondaryBgColor.lightness }}, {{ .css.colors.secondaryBgColor.alpha }});
-}
-button.secondary.inverted:hover,
-.button.primary.inverted:hover {
-  background-color: hsla({{ .css.colors.secondaryColor.hue }}, {{ .css.colors.secondaryColor.saturation }}, {{ addPercentage "20%" .css.colors.secondaryColor.lightness }}, {{ .css.colors.secondaryColor.alpha }});
 }
 
 /* icon button */

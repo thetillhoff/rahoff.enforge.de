@@ -21,11 +21,11 @@
 
 {{ include "svgs.html" . | nindent 4 | safehtml }}
 
-    <div class="center page">
+{{ include "navigation.html" . | nindent 4 | safehtml }}
+
+    <div class="page">
 {{ include "page" . | nindent 6 | safehtml }}
     </div>
-
-{{ include "navigation.html" . | nindent 4 | safehtml }}
 
   </body>
 </html>

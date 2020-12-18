@@ -1,8 +1,10 @@
 {{/* include this _before_ button template! */}}
 {{ define "icons.css" -}}
 .icon > svg {
-  height: calc({{ .css.fontsize }} * {{ .factors.icons }});
-  width: calc({{ .css.fontsize }} * {{ .factors.icons }});
+  /*height: calc({{ .css.fontsize }} * {{ .factors.icons }});
+  width: calc({{ .css.fontsize }} * {{ .factors.icons }});*/
+  max-height: 90%;
+  max-width: 90%;
   display: inline-block;
 
   fill: hsla({{ .css.colors.buttonColor.hue }}, {{ .css.colors.buttonColor.saturation }}, {{ .css.colors.buttonColor.lightness }}, {{ .css.colors.buttonColor.alpha }});
