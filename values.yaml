@@ -13,21 +13,9 @@ css:
       alpha: 1
     
     primaryBgColor:
-      hue: 60
-      saturation: 100%
-      lightness: 27%
-      alpha: 1
-
-    secondaryColor:
-      hue: 240
-      saturation: 100%
-      lightness: 43%
-      alpha: 1
-    
-    secondaryBgColor:
-      hue: 120
-      saturation: 100%
-      lightness: 43%
+      hue: 0
+      saturation: 0%
+      lightness: 60%
       alpha: 1
     
     siteColor:
@@ -66,7 +54,7 @@ css:
     transitionDuration: 0.2s
 
   navigation:
-    padding: 0.8rem
+    padding: 0.3rem
 
 factors:
   icons: 1.2
