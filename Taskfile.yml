@@ -6,12 +6,14 @@ silent: true
 
 tasks:
   build:
+    desc: Build the files / templating
     cmds:
       - "../temingo/temingo{{ .EXTENSION }} -values values.yaml -inputDir . -partialsDir partials -outputDir output -templateFileExtension .html.template -partialFileExtension .template -generatedFileExtension .html"
     vars:
       EXTENSION: '{{ if eq OS "windows" }}.exe{{ end }}'
 
   serve:
+    desc: Start the dev-server
     dir: output
     cmds:
       - "../../serve/serve{{ .EXTENSION }}"
