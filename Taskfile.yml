@@ -8,7 +8,20 @@ tasks:
   build:
     desc: Build the files / templating
     cmds:
-      - "../temingo/temingo{{ .EXTENSION }} -values values.yaml -inputDir . -partialsDir partials -outputDir output -templateFileExtension .html.template -partialFileExtension .template -generatedFileExtension .html"
+      - |
+        mv ./output/static ./static_temp && \
+        rm -dr ./output/* && \
+        mkdir -p ./output && \
+        mv ./static_temp ./output/static || true
+      - |
+        ../temingo/temingo{{ .EXTENSION }} \
+        --valuesfile values.yaml \
+        --inputDir . \
+        --partialsDir partials \
+        --outputDir output \
+        --templateExtension .html.template \
+        --partialExtension .template \
+        --generatedExtension .html
     vars:
       EXTENSION: '{{ if eq OS "windows" }}.exe{{ end }}'
 

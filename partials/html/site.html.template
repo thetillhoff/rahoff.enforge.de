@@ -15,7 +15,7 @@
 
     <!-- javascript -->
     <!-- if ever needed, integrate javascript inline as well to reduce number of blocking calls -->
-    <!-- <script type="text/javascript" src="/main.js"></script> -->
+    <!-- <script type="text/javascript" src="/static/js/main.js"></script> -->
   </head>
   <body>
 
