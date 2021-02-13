@@ -15,13 +15,7 @@ tasks:
         mv ./static_temp ./output/static || true
       - |
         ../temingo/temingo{{ .EXTENSION }} \
-        --valuesfile values.yaml \
-        --inputDir . \
-        --partialsDir partials \
-        --outputDir output \
-        --templateExtension .html.template \
-        --partialExtension .template \
-        --generatedExtension .html
+        --valuesfile values.yaml
     vars:
       EXTENSION: '{{ if eq OS "windows" }}.exe{{ end }}'
 
