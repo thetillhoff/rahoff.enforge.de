@@ -8,7 +8,10 @@ tasks:
   build:
     desc: Build the files / templating
     cmds:
-      - "../temingo/temingo{{ .EXTENSION }} -values values.yaml -inputDir . -partialsDir partials -outputDir output -templateFileExtension .html.template -partialFileExtension .template -generatedFileExtension .html"
+      - cmd: '{{ if eq OS "windows" }}powershell -command "rm -path output/* -recurse"{{ else }}rm --recursive output/*{{ end }}'
+        ignore_error: true
+      - "../temingo/temingo{{ .EXTENSION }} --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --templateExtension .html.template --partialExtension .template --generatedExtension .html"
+      - '{{ if eq OS "windows" }}powershell -command "cp -r static/* output/"{{ else }}cp -r static/* output/{{ end }}'
     vars:
       EXTENSION: '{{ if eq OS "windows" }}.exe{{ end }}'
 
