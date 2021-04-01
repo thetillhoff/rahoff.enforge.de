@@ -54,4 +54,12 @@
     <path d="m 107.43598,119.47369 -5.7138,9.97315 5.66692,9.94565 -9.815229,-5.74222 -9.84238,5.78973 5.71381,-9.97315 v 0 l -5.84474,-9.67899 9.99305,5.47555 z" />
   </g>
 </svg>
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+ <g id="three-stripes">
+  <title>Three stripes</title>
+  <line stroke-width="50" y2="25" x2="400" y1="25" x1="0" stroke="#000"/>
+  <line stroke-width="50" y2="125" x2="400" y1="125" x1="0" stroke="#000"/>
+  <line stroke-width="50" y2="225" x2="400" y1="225" x1="0" stroke="#000"/>
+ </g>
+</svg>
 {{- end }}

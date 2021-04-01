@@ -15,10 +15,11 @@
   font-family: "Open Sans", sans-serif;
   color: hsla({{ .css.colors.siteColor.hue }}, {{ .css.colors.siteColor.saturation }}, {{ .css.colors.siteColor.lightness }}, {{ .css.colors.siteColor.alpha }});
   box-sizing: content-box; /* remove strange behaviour of some native elements - looking at you _button_! */
+  border: solid 1px red;
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -34,17 +35,23 @@ body {
   font-size: {{ .css.fontsize }};
 }
 
-.page {
+p {
+  line-height: 1.3rem;
+}
+
+#page {
   height: calc(100% - 4* {{ .css.navigation.padding }} - {{ .css.fontsize }});
-  width: 100%;
+  width: 90%;
 }
 @media only screen and (min-width:768px) {
-  .page {
+  #page {
     height: calc(100% - (2* {{ .css.navigation.padding }}) - {{ .css.fontsize }}); /* corresponds to navigation.css */
   }
 }
 
 {{ template "helpers.css" . }}
+
+{{ template "dimmer.css" . }}
 
 {{ template "navigation.css" . }}
 

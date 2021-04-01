@@ -1,13 +1,18 @@
 {{ define "page" -}}
-<div class="center vertical spaced">
-  <span>Almost nothing to see here.</span>
-
-  <div class="buttons">
-    <a class="big inverted icon button" href="https://github.com/enforge-de">
-      <svg viewBox="0 0 24 24">
-        <use xlink:href="#github"></use>
-      </svg>
-    </a>
-  </div>
-</div>
+<h1>
+  Hallo! Ich bin
+  <br/>
+  Rainer Hoffmann.
+</h1>
+<p>
+  Genie, Milliardär, Playboy, Philanthrop - halt stop, das war <a href="https://de.wikipedia.org/wiki/Iron_Man_(Film)">Tony Stark</a>.
+  <br/>
+  Tatsächlich spiegelt sich aber trotzdem eine Leidenschaft für Maschinenbau in meinen Hobbies wider:
+  <br/>
+  Als Goldschmied, Maler, Schreiner, Holzfäller und nicht zuletzt durch mein selbstgebautes Elektroauto bin ich in meinem Umfeld bekannt als Künstler und Bastler.
+  <br/>
+  Regelmäßig werde ich deshalb nach Bildern gefragt oder möchte jemandem eine Freude mit einem Schmuckstück machen. Beides soll diese Webseite unterstützen.
+  <br/>
+  Hier findest Du Bilder und Beschreibungen meiner Werke - wenn Dir etwas besonders gut gefällt oder du mehr wissen möchtest, freue ich mich auf Deine Nachricht!
+</p>
 {{- end }}

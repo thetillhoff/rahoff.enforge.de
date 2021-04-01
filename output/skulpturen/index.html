@@ -26,10 +26,11 @@
       font-family: "Open Sans", sans-serif;
       color: hsla(0, 0%, 10%, 1);
       box-sizing: content-box; /* remove strange behaviour of some native elements - looking at you _button_! */
+      border: solid 1px red;
     }
     
     html {
-      height: 100%;
+      min-height: 100%;
     }
     
     body {
@@ -42,28 +43,32 @@
     
       background-color: hsla(0, 0%, 90%, 1);
     
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
     
-    .page {
-      height: calc(100% - 4* 0.3rem - 0.9rem);
-      width: 100%;
+    p {
+      line-height: 1.3rem;
+    }
+    
+    #page {
+      height: calc(100% - 4* 0.5rem - 1rem);
+      width: 90%;
     }
     @media only screen and (min-width:768px) {
-      .page {
-        height: calc(100% - (2* 0.3rem) - 0.9rem); /* corresponds to navigation.css */
+      #page {
+        height: calc(100% - (2* 0.5rem) - 1rem); /* corresponds to navigation.css */
       }
     }
     
     .hidden {
-      display: none;
+      display: none !important;
     }
     
     .container {
       width: 95vh;
     }
     
-    .center {
+    .centered-content {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -105,11 +110,22 @@
       }
     }
     
+    .dimmed.overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: hsla(0, 0%, 10%, 1);
+    }
+    
     .navigation {
       width: 100%;
     
-      color: hsla(0, 0%, 90%, 1);  
-      background-color: hsla(0, 0%, 10%, 1);
+      color: hsla(0, 0%, 10%, 1);
+      background-color: hsla(0, 0%, 90%, 1);
     
       display: flex;
       justify-content: center;
@@ -119,40 +135,21 @@
     .navigation > .container {
       width: 100%;
       display: flex;
-      justify-content: flex-start;
-      align-items: baseline;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .navigation .logo {
+      padding: 1rem;
+    }
+    
+    .navigation .icon.button {
+      margin-right: 1.5rem;
+      border: none;
     }
     
     .navigation .element {
-      padding: calc(2* 0.3rem);
-    
-      border-color: hsla(0, 0%, 20%, 1);
-    
-      border-style: solid;
-      border-width: 2px;
-      border-top: none;
-      border-bottom: none;
-      border-right: none; /* goes together with .navigation.element:first-child */
-    }
-    .navigation.element:first-child {
-      border-left: none;
-    }
-    .navigation.element:hover {
-      background-color: hsla(0, 0%, 20%, 1);
-    }
-    
-    @media only screen and (min-width:768px) {
-      .navigation {
-        order: -1;
-      }
-    
-      .navigation > .container {
-        max-width: 1092px; /* 95% of 1150 */
-      }
-    
-      .navigation .element {
-        padding: 0.3rem;
-      }
+      padding: 1rem;
     }
     
     /* general button styling */
@@ -161,8 +158,8 @@
       /* positioning, size */
       
       padding: calc(1rem * 0.5);
-      height: 0.9rem;
-      min-width: 0.9rem;
+      height: 1rem;
+      min-width: 1rem;
     
       text-align: center;
     
@@ -179,7 +176,7 @@
       /* border */
       border-style: solid;
       border-width: 2px;
-      border-radius: 5px;
+      border-radius: 0px;
     
       /* default button colors */
       color: hsla(0, 0%, 10%, 1);
@@ -191,16 +188,23 @@
     button.large,
     .button.large {
       padding: calc(1rem * 1.2 * 0.5);
-      height: calc(0.9rem * 1.2);
-      min-width: calc(0.9rem * 1.2);
-      font-size: calc(0.9rem * 1.2);
+      height: calc(1rem * 1.2);
+      min-width: calc(1rem * 1.2);
+      font-size: calc(1rem * 1.2);
     }
     button.big,
     .button.big {
       padding: calc(1rem * 1.4 * 0.5);
-      height: calc(0.9rem * 1.4);
-      min-width: calc(0.9rem * 1.4);
-      font-size: calc(0.9rem * 1.4);
+      height: calc(1rem * 1.4);
+      min-width: calc(1rem * 1.4);
+      font-size: calc(1rem * 1.4);
+    }
+    button.huge,
+    .button.huge {
+      padding: calc(1rem * 1.6 * 0.5);
+      height: calc(1rem * 1.6);
+      min-width: calc(1rem * 1.6);
+      font-size: calc(1rem * 1.6);
     }
     
     /* inline button */
@@ -254,21 +258,32 @@
     /* icon button */
     button.icon,
     .button.icon {
-      height: calc(0.9rem * 1.2);
-      min-width: calc(0.9rem * 1.2);
-      padding: calc(1rem * 0.5 - (0.9rem * 1.2 - 0.9rem) / 2);
+      height: calc(1rem * 1.2);
+      min-width: calc(1rem * 1.2);
+      padding: calc(1rem * 0.5 - (1rem * 1.2 - 1rem) / 2);
+    
+      /* center contents */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     button.large.icon,
     .button.large.icon {
-      height: calc(0.9rem * 1.2 * 1.2);
-      min-width: calc(0.9rem * 1.2 * 1.2);
-      padding: calc(1rem * 1.2 * 0.5 - (0.9rem * 1.2 * 1.2 - 0.9rem * 1.2) / 2);
+      height: calc(1rem * 1.2 * 1.2);
+      min-width: calc(1rem * 1.2 * 1.2);
+      padding: calc(1rem * 1.2 * 0.5 - (1rem * 1.2 * 1.2 - 1rem * 1.2) / 2);
     }
     button.big.icon,
     .button.big.icon {
-      height: calc(0.9rem * 1.2 * 1.4);
-      min-width: calc(0.9rem * 1.2 * 1.4);
-      padding: calc(1rem * 1.4 * 0.5 - (0.9rem * 1.2 * 1.4 - 0.9rem * 1.4) / 2);
+      height: calc(1rem * 1.2 * 1.4);
+      min-width: calc(1rem * 1.2 * 1.4);
+      padding: calc(1rem * 1.4 * 0.5 - (1rem * 1.2 * 1.4 - 1rem * 1.4) / 2);
+    }
+    button.huge.icon,
+    .button.huge.icon {
+      height: calc(1rem * 1.2 * 1.6);
+      min-width: calc(1rem * 1.2 * 1.6);
+      padding: calc(1rem * 1.6 * 0.5 - (1rem * 1.2 * 1.6 - 1rem * 1.6) / 2);
     }
     
     button.grouped,
@@ -277,21 +292,21 @@
     }
     button.grouped:first-child,
     .button.grouped:first-child {
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
     }
     button.grouped:last-child,
     .button.grouped:last-child {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
     }
     .grouped:not(:last-child) {
       border-right: none;
     }
     
     .icon > svg {
-      /*height: calc(0.9rem * 1.2);
-      width: calc(0.9rem * 1.2);*/
+      /*height: calc(1rem * 1.2);
+      width: calc(1rem * 1.2);*/
       max-height: 90%;
       max-width: 90%;
       display: inline-block;
@@ -299,13 +314,17 @@
       fill: hsla(0, 0%, 10%, 1);
     }
     
-    .large.icon > svg {
-      height: calc(0.9rem * 1.2 * 1.2);
-      width: calc(0.9rem * 1.2 * 1.2);
+    .large.square.icon > svg {
+      height: calc(1rem * 1.2 * 1.2);
+      width: calc(1rem * 1.2 * 1.2);
     }
-    .big.icon > svg {
-      height: calc(0.9rem * 1.2 * 1.4);
-      width: calc(0.9rem * 1.2 * 1.4);
+    .big.square.icon > svg {
+      height: calc(1rem * 1.2 * 1.4);
+      width: calc(1rem * 1.2 * 1.4);
+    }
+    .huge.square.icon > svg {
+      height: calc(1rem * 1.2 * 1.6);
+      width: calc(1rem * 1.2 * 1.6);
     }
     
     .inverted.icon > svg {
@@ -316,7 +335,7 @@
 
     
     
-    
+    <script type="text/javascript" src="/js/main.js"></script>
   </head>
   <body>
 
@@ -376,17 +395,57 @@
         <path d="m 107.43598,119.47369 -5.7138,9.97315 5.66692,9.94565 -9.815229,-5.74222 -9.84238,5.78973 5.71381,-9.97315 v 0 l -5.84474,-9.67899 9.99305,5.47555 z" />
       </g>
     </svg>
+    <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+     <g id="three-stripes">
+      <title>Three stripes</title>
+      <line stroke-width="50" y2="25" x2="400" y1="25" x1="0" stroke="#000"/>
+      <line stroke-width="50" y2="125" x2="400" y1="125" x1="0" stroke="#000"/>
+      <line stroke-width="50" y2="225" x2="400" y1="225" x1="0" stroke="#000"/>
+     </g>
+    </svg>
+
+
+    <div id="overlay-loader" class="centered-content dimmed overlay">
+      <img id="loader" src="/images/loader.svg" alt="loading..."></img>
+    </div>
 
 
     <div class="navigation">
       <div class="container">
-        <a href="/" class="grouped nolink navigation element" >enforge.de</a>
-        <a href="/till.hoffmann/" class="grouped nolink navigation element" >Till Hoffmann</a>
+        <a class="logo" href="/">
+          <img src="/images/rahoff-scale-1.svg" alt="RaHoff"></img>
+        </a>
+        <button class="huge icon button" onclick="togglePageNavigation();">
+          <svg viewBox="0 0 400 250">
+            <use xlink:href="#three-stripes"></use>
+          </svg>
+        </button>
       </div>
     </div>
+    <div id="pageNavigation" class="hidden vertical navigation menu">
+      <a class="element" href="/schmuck">
+        Schmuck
+      </a>
+      <a class="element" href="/bilder">
+        Bilder
+      </a>
+      <a class="element" href="/skulpturen">
+        Skulpturen
+      </a>
+      <a class="element" href="/elektroauto">
+        Elektroauto
+      </a>
+      <a class="element" href="mailto:rahoff@email.de?subject=[rahoff.enforge.de] Anfrage" target="_blank" rel="noopener nofollow noreferrer">
+        Kontakt via E-Mail
+      </a>
+    </div>
 
-    <div class="page">
+    <div id="page">
 
+      <h1>
+        Skulpturen
+      </h1>
+      
       <div class="center vertical spaced">
         <span>Almost nothing to see here.</span>
       </div>

@@ -1,13 +1,13 @@
 {{ define "helpers.css" -}}
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .container {
   width: 95vh;
 }
 
-.center {
+.centered-content {
   display: flex;
   justify-content: center;
   align-items: center;

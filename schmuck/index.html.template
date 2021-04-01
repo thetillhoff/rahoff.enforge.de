@@ -1,0 +1,17 @@
+{{ define "page" -}}
+<h1>
+  Schmuck
+</h1>
+
+<div class="vertical navigation menu">
+  <a class="element" href="/schmuck/ringe">
+    Ringe
+  </a>
+  <a class="element" href="/schmuck/halsketten">
+    Halsketten
+  </a>
+  <a class="element" href="/schmuck/anhaenger">
+    Anh&#228;nger
+  </a>
+</div>
+{{- end }}

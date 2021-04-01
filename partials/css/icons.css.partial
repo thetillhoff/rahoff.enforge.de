@@ -10,13 +10,17 @@
   fill: hsla({{ .css.colors.buttonColor.hue }}, {{ .css.colors.buttonColor.saturation }}, {{ .css.colors.buttonColor.lightness }}, {{ .css.colors.buttonColor.alpha }});
 }
 
-.large.icon > svg {
+.large.square.icon > svg {
   height: calc({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.large }});
   width: calc({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.large }});
 }
-.big.icon > svg {
+.big.square.icon > svg {
   height: calc({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.big }});
   width: calc({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.big }});
+}
+.huge.square.icon > svg {
+  height: calc({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.huge }});
+  width: calc({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.huge }});
 }
 
 .inverted.icon > svg {

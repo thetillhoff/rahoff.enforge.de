@@ -14,16 +14,18 @@
     <!-- <link rel="stylesheet" href="/main.css"> -->
 
     <!-- javascript -->
-    <!-- if ever needed, integrate javascript inline as well to reduce number of blocking calls -->
-    <!-- <script type="text/javascript" src="/static/js/main.js"></script> -->
+    <!-- if ever needed, critical javascript should be integrated inline as well to reduce number of blocking calls -->
+    <script type="text/javascript" src="/js/main.js"></script>
   </head>
   <body>
 
 {{ include "svgs.html" . | nindent 4 | safehtml }}
 
+{{ include "dimmer.html" . | nindent 4 | safehtml }}
+
 {{ include "navigation.html" . | nindent 4 | safehtml }}
 
-    <div class="page">
+    <div id="page">
 {{ include "page" . | nindent 6 | safehtml }}
     </div>
 

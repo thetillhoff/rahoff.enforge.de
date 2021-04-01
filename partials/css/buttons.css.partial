@@ -46,6 +46,13 @@ button.big,
   min-width: calc({{ .css.fontsize }} * {{ .factors.sizes.big }});
   font-size: calc({{ .css.fontsize }} * {{ .factors.sizes.big}});
 }
+button.huge,
+.button.huge {
+  padding: calc({{ .css.generalsize }} * {{ .factors.sizes.huge }} * {{ $buttonPadding }});
+  height: calc({{ .css.fontsize }} * {{ .factors.sizes.huge }});
+  min-width: calc({{ .css.fontsize }} * {{ .factors.sizes.huge }});
+  font-size: calc({{ .css.fontsize }} * {{ .factors.sizes.huge}});
+}
 
 /* inline button */
 button.inline,
@@ -101,6 +108,11 @@ button.icon,
   height: calc({{ .css.fontsize }} * {{ .factors.icons }});
   min-width: calc({{ .css.fontsize }} * {{ .factors.icons }});
   padding: calc({{ .css.generalsize }} * {{ $buttonPadding }} - ({{ .css.fontsize }} * {{ .factors.icons }} - {{ .css.fontsize}}) / 2);
+
+  /* center contents */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 button.large.icon,
 .button.large.icon {
@@ -113,5 +125,11 @@ button.big.icon,
   height: calc({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.big }});
   min-width: calc({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.big }});
   padding: calc({{ .css.generalsize }} * {{ .factors.sizes.big }} * {{ $buttonPadding }} - ({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.big }} - {{ .css.fontsize}} * {{ .factors.sizes.big }}) / 2);
+}
+button.huge.icon,
+.button.huge.icon {
+  height: calc({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.huge }});
+  min-width: calc({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.huge }});
+  padding: calc({{ .css.generalsize }} * {{ .factors.sizes.huge }} * {{ $buttonPadding }} - ({{ .css.fontsize }} * {{ .factors.icons }} * {{ .factors.sizes.huge }} - {{ .css.fontsize}} * {{ .factors.sizes.huge }}) / 2);
 }
 {{- end }}

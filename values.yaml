@@ -3,7 +3,7 @@ title: Rahoff
 css:
 
   generalsize: 1rem # size of elements
-  fontsize: 0.9rem
+  fontsize: 1rem
 
   colors:
     primaryColor:
@@ -47,14 +47,14 @@ css:
       alpha: 1
 
   borders:
-    radius: 5px
+    radius: 0px
     width: 2px
   
   animations:
     transitionDuration: 0.2s
 
   navigation:
-    padding: 0.3rem
+    padding: 0.5rem
 
 factors:
   icons: 1.2
@@ -62,3 +62,4 @@ factors:
     #regular: 1 # just for reference - not actually used anywhere
     large: 1.2
     big: 1.4
+    huge: 1.6
