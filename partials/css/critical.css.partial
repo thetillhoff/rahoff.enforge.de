@@ -35,6 +35,12 @@ body {
   font-size: {{ .css.fontsize }};
 }
 
+/* Limit image widths so they never cause a scrollbar*/
+img {
+  max-width: 100%;
+  display: block;
+}
+
 p {
   line-height: 1.3rem;
 }
