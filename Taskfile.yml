@@ -4,21 +4,22 @@ version: '3'
 
 silent: true
 
+vars:
+  DEBUG: "false" # Default value is necessary to prevent type issues when comparing it
+
 tasks:
   build:
     desc: Build the files / templating
     cmds:
-      - cmd: '{{ if eq OS "windows" }}powershell -command "rm -path output/* -recurse"{{ else }}rm --recursive output/*{{ end }}'
-        ignore_error: true
-      - "../temingo/temingo{{ .EXTENSION }} --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --templateExtension .template --partialExtension .partial"
-      - '{{ if eq OS "windows" }}powershell -command "cp -r static/* output/"{{ else }}cp -r static/* output/{{ end }}'
-    vars:
-      EXTENSION: '{{ if eq OS "windows" }}.exe{{ end }}'
+      - ../temingo/temingo{{ exeExt }} --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --staticDir static --templateExtension .template --partialExtension .partial{{ if eq .DEBUG "true" }} --debug{{ end }}
+
+  watch: # go-task could do this as well, but I've implemented in the code itself (for completeness: https://taskfile.dev/#/usage?id=watch-tasks)
+    desc: Watching the templates & rebuilding when changes occur
+    cmds:
+      - ../temingo/temingo{{ exeExt }} --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --staticDir static --templateExtension .template --partialExtension .partial --watch{{ if eq .DEBUG "true" }} --debug{{ end }}
 
   serve:
     desc: Start the dev-server
     dir: output
     cmds:
-      - "../../serve/serve{{ .EXTENSION }}"
-    vars:
-      EXTENSION: '{{ if eq OS "windows" }}.exe{{ end }}'
+      - ../../serve/serve{{ exeExt }}{{ if eq DEBUG "true" }} --debug{{ end }}
