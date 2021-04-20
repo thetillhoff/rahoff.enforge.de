@@ -37,8 +37,10 @@ body {
 
 /* Limit image widths so they never cause a scrollbar*/
 img {
+  height: 100%;
   max-width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 p {
@@ -47,7 +49,6 @@ p {
 
 #page {
   height: calc(100% - 4* {{ .css.navigation.padding }} - {{ .css.fontsize }});
-  width: 90%;
 }
 @media only screen and (min-width:768px) {
   #page {

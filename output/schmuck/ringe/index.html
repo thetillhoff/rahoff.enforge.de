@@ -48,8 +48,10 @@
     
     /* Limit image widths so they never cause a scrollbar*/
     img {
+      height: 100%;
       max-width: 100%;
       display: block;
+      object-fit: cover;
     }
     
     p {
@@ -58,7 +60,6 @@
     
     #page {
       height: calc(100% - 4* 0.5rem - 1rem);
-      width: 90%;
     }
     @media only screen and (min-width:768px) {
       #page {
@@ -71,7 +72,8 @@
     }
     
     .container {
-      width: 95vh;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .centered-content {
@@ -103,6 +105,10 @@
       justify-content: space-around;
     }
     
+    .expanding {
+      flex: auto;
+    }
+    
     a.nolink,
     a.nolink:hover,
     a.nolink:active,
@@ -110,9 +116,20 @@
       text-decoration: none;
     }
     
-    @media only screen and (min-width:1150px) {
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      grid-gap: 1rem;
+    }
+    
+    @media only screen and (max-width: calc(1150px - 0.01px)) {
       .container {
-        max-width: 1092px; /* 95% of 1150 */
+        width: 90vw; /* occurs 1x directly below as well */
+      }
+    }
+    @media only screen and (min-width: 1150px) {
+      .container {
+        width: calc(0.90 * 1150px); /* occurs 1x dircelty above as well */
       }
     }
     
@@ -141,7 +158,6 @@
     }
     
     .navigation > .container {
-      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -450,12 +466,34 @@
 
     <div id="page">
 
-      <h1>
-        Ringe
-      </h1>
+      <div class="container">
+        <h1>
+          Ringe
+        </h1>
       
-      <div class="center vertical spaced">
-        <span>Almost nothing to see here.</span>
+        <div class="article-grid">
+          <article class="vertical">
+            <div class="expanding">
+              <img src="/images/eichenstein/Eichenstein.jpg">
+            </div>
+            <a href="/schmuck/ringe/eichenstein">Eichenstein</a>
+          </article><article class="vertical">
+            <div class="expanding">
+              <img src="/images/gebogene_ronde/Gebogene_Ronde.jpg">
+            </div>
+            <a href="/schmuck/ringe/gebogene_ronde">Gebogene Ronde</a>
+          </article><article class="vertical">
+            <div class="expanding">
+              <img src="/images/lichtreflexe_classic/Lichtreflexe_classic.jpg">
+            </div>
+            <a href="/schmuck/ringe/lichtreflexe_classic">Lichtreflexe Classic</a>
+          </article><article class="vertical">
+            <div class="expanding">
+              <img src="/images/lichtreflexe_modern/Lichtreflexe_modern.jpg">
+            </div>
+            <a href="/schmuck/ringe/lichtreflexe_modern">Lichtreflexe Modern</a>
+          </article>
+        </div>
       </div>
     </div>
 

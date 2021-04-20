@@ -4,7 +4,8 @@
 }
 
 .container {
-  width: 95vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .centered-content {
@@ -36,6 +37,10 @@
   justify-content: space-around;
 }
 
+.expanding {
+  flex: auto;
+}
+
 a.nolink,
 a.nolink:hover,
 a.nolink:active,
@@ -43,9 +48,20 @@ a.nolink:visited {
   text-decoration: none;
 }
 
-@media only screen and (min-width:1150px) {
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 1rem;
+}
+
+@media only screen and (max-width: calc({{ .css.containerwidth }} - 0.01px)) {
   .container {
-    max-width: 1092px; /* 95% of 1150 */
+    width: 90vw; /* occurs 1x directly below as well */
+  }
+}
+@media only screen and (min-width: {{ .css.containerwidth }}) {
+  .container {
+    width: calc(0.90 * {{ .css.containerwidth }}); /* occurs 1x dircelty above as well */
   }
 }
 {{- end }}

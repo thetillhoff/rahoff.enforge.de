@@ -1,0 +1,11 @@
+{{ define "page" -}}
+<h1>
+  Single View
+</h1>
+
+<div class="center vertical spaced">
+  <span>Almost nothing to see here.</span>
+</div>
+
+
+{{- end }}
