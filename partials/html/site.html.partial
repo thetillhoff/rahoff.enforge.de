@@ -9,7 +9,7 @@
     <!-- normally, normalize would be optimally loaded by the following line - but because I want this integrated in the critical css, its disabled -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" onerror="this.onerror=null;this.href="/normalize.min.css"> -->
     <style>
-{{ include "critical.css" . | nindent 4 | safecss }}
+{{ include "critical.css" . | nindent 4 | safeCSS }}
     </style>
     <!-- <link rel="stylesheet" href="/main.css"> -->
 
@@ -19,14 +19,14 @@
   </head>
   <body>
 
-{{ include "svgs.html" . | nindent 4 | safehtml }}
+{{ include "svgs.html" . | nindent 4 | safeHTML }}
 
-{{ include "dimmer.html" . | nindent 4 | safehtml }}
+{{ include "dimmer.html" . | nindent 4 | safeHTML }}
 
-{{ include "navigation.html" . | nindent 4 | safehtml }}
+{{ include "navigation.html" . | nindent 4 | safeHTML }}
 
     <div id="page">
-{{ include "page" . | nindent 6 | safehtml }}
+{{ include "page" . | nindent 6 | safeHTML }}
     </div>
 
   </body>

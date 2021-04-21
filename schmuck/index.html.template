@@ -1,7 +1,9 @@
 {{ define "page" -}}
-<h1>
-  Schmuck
-</h1>
+<div class="container">
+  <h1>
+    Schmuck
+  </h1>
+</div>
 
 <div class="vertical navigation menu">
   <a class="element" href="/schmuck/ringe">

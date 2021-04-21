@@ -48,10 +48,48 @@ a.nolink:visited {
   text-decoration: none;
 }
 
+.bordered {
+  border-width: {{ .css.borders.width }};
+  border-radius: {{ .css.borders.radius }};
+}
+.outer-border {
+  border-radius: calc(2 * {{ .css.borders.radius }});
+}
+
+.slightly-padded {
+  padding: 0.5em;
+}
+
 .article-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.galleryImageButton {
+  border: none;
+}
+
+article, .article {
+  background-color:hsla(0, 0%, 100%, 1);
+}
+
+/* hover link styling (taken from "hover button styling") */
+a:hover, a:focus,
+.a:hover, .a:focus {
+  background-color: hsla({{ .css.colors.buttonBgColor.hue }}, {{ .css.colors.buttonBgColor.saturation }}, {{ addPercentage "-20%" .css.colors.buttonBgColor.lightness }}, {{ .css.colors.buttonBgColor.alpha }});
+}
+a.inverted:hover, a.inverted:focus,
+.a.inverted:hover, .a.inverted:focus {
+  background-color: hsla({{ .css.colors.buttonColor.hue }}, {{ .css.colors.buttonColor.saturation }}, {{ addPercentage "20%" .css.colors.buttonColor.lightness }}, {{ .css.colors.buttonColor.alpha }});
+}
+a.primary:hover, a.primary:focus,
+.a.primary:hover .a.primary:focus {
+  background-color: hsla({{ .css.colors.primaryBgColor.hue }}, {{ .css.colors.primaryBgColor.saturation }}, {{ addPercentage "20%" .css.colors.primaryBgColor.lightness }}, {{ .css.colors.primaryBgColor.alpha }});
+}
+a.primary.inverted:hover, a.primary.inverted:focus,
+.a.primary.inverted:hover, .a.primary.inverted:focus {
+  background-color: hsla({{ .css.colors.primaryColor.hue }}, {{ .css.colors.primaryColor.saturation }}, {{ addPercentage "20%" .css.colors.primaryColor.lightness }}, {{ .css.colors.primaryColor.alpha }});  
 }
 
 @media only screen and (max-width: calc({{ .css.containerwidth }} - 0.01px)) {

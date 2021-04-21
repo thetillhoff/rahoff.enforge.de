@@ -15,7 +15,9 @@
   font-family: "Open Sans", sans-serif;
   color: hsla({{ .css.colors.siteColor.hue }}, {{ .css.colors.siteColor.saturation }}, {{ .css.colors.siteColor.lightness }}, {{ .css.colors.siteColor.alpha }});
   box-sizing: content-box; /* remove strange behaviour of some native elements - looking at you _button_! */
-  border: solid 1px red;
+  border-color: hsla({{ .css.colors.borderColor.hue }}, {{ .css.colors.borderColor.saturation }}, {{ .css.colors.borderColor.lightness }}, {{ .css.colors.borderColor.alpha }});
+  /* border: solid 1px red; */
+  transition-duration: 0.1s;
 }
 
 html {
@@ -41,6 +43,7 @@ img {
   max-width: 100%;
   display: block;
   object-fit: cover;
+  border-radius: {{ .css.borders.radius }};
 }
 
 p {
@@ -49,6 +52,7 @@ p {
 
 #page {
   height: calc(100% - 4* {{ .css.navigation.padding }} - {{ .css.fontsize }});
+  width: 100%;
 }
 @media only screen and (min-width:768px) {
   #page {

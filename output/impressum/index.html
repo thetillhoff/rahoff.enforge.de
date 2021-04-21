@@ -26,7 +26,9 @@
       font-family: "Open Sans", sans-serif;
       color: hsla(0, 0%, 10%, 1);
       box-sizing: content-box; /* remove strange behaviour of some native elements - looking at you _button_! */
-      border: solid 1px red;
+      border-color: hsla(0, 0%, 20%, 1);
+      /* border: solid 1px red; */
+      transition-duration: 0.1s;
     }
     
     html {
@@ -52,6 +54,7 @@
       max-width: 100%;
       display: block;
       object-fit: cover;
+      border-radius: 5px;
     }
     
     p {
@@ -60,6 +63,7 @@
     
     #page {
       height: calc(100% - 4* 0.5rem - 1rem);
+      width: 100%;
     }
     @media only screen and (min-width:768px) {
       #page {
@@ -116,10 +120,48 @@
       text-decoration: none;
     }
     
+    .bordered {
+      border-width: 2px;
+      border-radius: 5px;
+    }
+    .outer-border {
+      border-radius: calc(2 * 5px);
+    }
+    
+    .slightly-padded {
+      padding: 0.5em;
+    }
+    
     .article-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-      grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      grid-gap: 2rem;
+    }
+    
+    .galleryImageButton {
+      border: none;
+    }
+    
+    article, .article {
+      background-color:hsla(0, 0%, 100%, 1);
+    }
+    
+    /* hover link styling (taken from "hover button styling") */
+    a:hover, a:focus,
+    .a:hover, .a:focus {
+      background-color: hsla(0, 0%, 70%, 1);
+    }
+    a.inverted:hover, a.inverted:focus,
+    .a.inverted:hover, .a.inverted:focus {
+      background-color: hsla(0, 0%, 30%, 1);
+    }
+    a.primary:hover, a.primary:focus,
+    .a.primary:hover .a.primary:focus {
+      background-color: hsla(0, 0%, 80%, 1);
+    }
+    a.primary.inverted:hover, a.primary.inverted:focus,
+    .a.primary.inverted:hover, .a.primary.inverted:focus {
+      background-color: hsla(0, 100%, 63%, 1);  
     }
     
     @media only screen and (max-width: calc(1150px - 0.01px)) {
@@ -200,7 +242,7 @@
       /* border */
       border-style: solid;
       border-width: 2px;
-      border-radius: 0px;
+      border-radius: 5px;
     
       /* default button colors */
       color: hsla(0, 0%, 10%, 1);
@@ -209,6 +251,13 @@
     }
     
     /* button sizes */
+    button,
+    .button {
+      padding: calc(1rem * 0.5);
+      height: 1rem;
+      min-width: 1rem;
+      font-size: 1rem;
+    }
     button.large,
     .button.large {
       padding: calc(1rem * 1.2 * 0.5);
@@ -231,6 +280,28 @@
       font-size: calc(1rem * 1.6);
     }
     
+    /* image button sizes */
+    button.image,
+    .button.image {
+      padding: 0;
+      height: calc(1rem + (1rem * 0.5));
+    }
+    button.large.image,
+    .button.large.image {
+      padding: 0;
+      height: calc(1rem * 1.2 + (1rem * 1.2 * 0.5));
+    }
+    button.big.image,
+    .button.big.image {
+      padding: 0;
+      height: calc(1rem * 1.4 + (1rem * 1.4 * 0.5));
+    }
+    button.huge.image,
+    .button.huge.image {
+      padding: 0;
+      height: calc(1rem * 1.6 + (1rem * 1.6 * 0.5));
+    }
+    
     /* inline button */
     button.inline,
     .button.inline {
@@ -240,7 +311,19 @@
     /* contains multiple buttons */
     .buttons > button,
     .buttons > .button {
-      margin-left: 1rem;
+      margin-left: 0.5rem;
+    }
+    .buttons > button.large,
+    .buttons > .button.large {
+      margin-left: calc(0.5rem * 1.2);
+    }
+    .buttons > button.big,
+    .buttons > .button.big {
+      margin-left: calc(0.5rem * 1.4);
+    }
+    .buttons > button.huge,
+    .buttons > .button.huge {
+      margin-left: calc(0.5rem * 1.6);
     }
     .buttons > button:first-child,
     .buttons > .button:first-child {
@@ -262,20 +345,20 @@
     }
     
     /* hover button styling */
-    button:hover,
-    .button:hover {
+    button:hover, button:focus,
+    .button:hover, .button:focus {
       background-color: hsla(0, 0%, 70%, 1);
     }
-    button.inverted:hover,
-    .button.inverted:hover {
+    button.inverted:hover, button.inverted:focus,
+    .button.inverted:hover, .button.inverted:focus {
       background-color: hsla(0, 0%, 30%, 1);
     }
-    button.primary:hover,
-    .button.primary:hover {
+    button.primary:hover, button.primary:focus,
+    .button.primary:hover, .button.primary:focus {
       background-color: hsla(0, 0%, 80%, 1);
     }
-    button.primary.inverted:hover,
-    .button.primary.inverted:hover {
+    button.primary.inverted:hover, button.primary.inverted:focus,
+    .button.primary.inverted:hover, .button.primary.inverted:focus {
       background-color: hsla(0, 100%, 63%, 1);  
     }
     
@@ -314,16 +397,17 @@
     .button.grouped {
       border-radius: 0;
     }
-    button.grouped:first-child,
-    .button.grouped:first-child {
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
+    .grouped:first-child,
+    .grouped:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
     }
-    button.grouped:last-child,
-    .button.grouped:last-child {
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
+    .grouped:last-child,
+    .grouped:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
     }
+    /* Removing duplicate borders between elements */
     .grouped:not(:last-child) {
       border-right: none;
     }
@@ -466,12 +550,14 @@
 
     <div id="page">
 
-      <h1>
-        Impressum
-      </h1>
+      <div class="container">
+        <h1>
+          Impressum
+        </h1>
       
-      <div class="center vertical spaced">
-        <span>Almost nothing to see here.</span>
+        <div class="center vertical spaced">
+          <span>Dieser Teil der Webseite befindet sich noch im Aufbau. Schau doch gerne sp&auml;ter nochmal vorbei!</span>
+        </div>
       </div>
     </div>
 

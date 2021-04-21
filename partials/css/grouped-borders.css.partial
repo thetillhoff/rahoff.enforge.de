@@ -3,16 +3,17 @@ button.grouped,
 .button.grouped {
   border-radius: 0;
 }
-button.grouped:first-child,
-.button.grouped:first-child {
+.grouped:first-child,
+.grouped:first-child {
   border-top-left-radius: {{ .css.borders.radius }};
   border-bottom-left-radius: {{ .css.borders.radius }};
 }
-button.grouped:last-child,
-.button.grouped:last-child {
+.grouped:last-child,
+.grouped:last-child {
   border-top-right-radius: {{ .css.borders.radius }};
   border-bottom-right-radius: {{ .css.borders.radius }};
 }
+/* Removing duplicate borders between elements */
 .grouped:not(:last-child) {
   border-right: none;
 }

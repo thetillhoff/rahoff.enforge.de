@@ -1,9 +1,11 @@
 {{ define "page" -}}
-<h1>
-  Impressum
-</h1>
+<div class="container">
+  <h1>
+    Impressum
+  </h1>
 
-<div class="center vertical spaced">
-  <span>Almost nothing to see here.</span>
+  <div class="center vertical spaced">
+    <span>Dieser Teil der Webseite befindet sich noch im Aufbau. Schau doch gerne sp&auml;ter nochmal vorbei!</span>
+  </div>
 </div>
 {{- end }}

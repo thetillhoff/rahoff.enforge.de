@@ -1,9 +1,41 @@
 {{ define "page" -}}
-<h1>
-  Anh&#228;nger
-</h1>
+<div class="container">
 
-<div class="center vertical spaced">
-  <span>Almost nothing to see here.</span>
+  Zurück zu:
+  {{- range $key, $value := .breadcrumbs }}
+  <a href="{{ $value }}">{{ $key | capitalize }}</a>
+  {{- end }}
+
+  <h1>
+    Anh&#228;nger
+  </h1>
+
+  <div class="article-grid">
+    {{ range list -}}
+    <a href="{{ .Path }}" class="vertical bordered outer-border slightly-padded article">
+      <div class="expanding">
+        <img src="/images/{{ .Name | urlize }}/{{ .Hauptbild }}">
+      </div>
+      <span>{{ .Name }}</span>
+      </a>
+    {{- end }}
+    {{ range list -}}
+    <a href="{{ .Path }}" class="vertical bordered outer-border slightly-padded article">
+      <div class="expanding">
+        <img src="/images/{{ .Name | urlize }}/{{ .Hauptbild }}">
+      </div>
+      <span>{{ .Name }}</span>
+      </a>
+    {{- end }}
+    {{ range list -}}
+    <a href="{{ .Path }}" class="vertical bordered outer-border slightly-padded article">
+      <div class="expanding">
+        <img src="/images/{{ .Name | urlize }}/{{ .Hauptbild }}">
+      </div>
+      <span>{{ .Name }}</span>
+      </a>
+    {{- end }}
+  </div>
 </div>
+
 {{- end }}
