@@ -1,0 +1,5 @@
+{{ define "footer.css" -}}
+footer {
+  margin-top: 3rem;
+}
+{{- end }}

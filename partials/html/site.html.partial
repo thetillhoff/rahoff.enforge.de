@@ -29,5 +29,8 @@
 {{ include "page" . | nindent 6 | safeHTML }}
     </div>
 
+    <div class="fillRemaining"></div>
+
+{{ include "footer.html" . | nindent 4 | safeHTML }}
   </body>
 </html>

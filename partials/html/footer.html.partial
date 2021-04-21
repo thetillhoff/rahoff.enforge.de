@@ -1,0 +1,7 @@
+{{ define "footer.html" -}}
+<footer>
+  <a href="/impressum">Impressum</a> <a href="/datenschutz">Datenschutz</a>
+  <br/>
+  Made with ❤️ by <a href="https://enforge.de/tillhoff">tillhoff</a>
+</footer>
+{{- end }}
