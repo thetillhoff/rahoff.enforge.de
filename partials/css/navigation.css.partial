@@ -9,7 +9,7 @@
   justify-content: center;
   align-content: center;
 
-  border-bottom: 2px solid;
+  border-bottom: 2px solid hsla({{ .css.colors.primaryColor.hue }}, {{ .css.colors.primaryColor.saturation }}, {{ .css.colors.primaryColor.lightness }}, {{ .css.colors.primaryColor.alpha }});
 }
 
 @media only screen and (max-width: calc({{ .css.containerwidth }} - 0.01px)) {

@@ -8,9 +8,9 @@ css:
 
   colors:
     primaryColor:
-      hue: 0
+      hue: 240
       saturation: 100%
-      lightness: 43%
+      lightness: 50%
       alpha: 1
     
     primaryBgColor:

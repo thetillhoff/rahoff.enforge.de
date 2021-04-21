@@ -16,6 +16,7 @@
   color: hsla({{ .css.colors.siteColor.hue }}, {{ .css.colors.siteColor.saturation }}, {{ .css.colors.siteColor.lightness }}, {{ .css.colors.siteColor.alpha }});
   box-sizing: content-box; /* remove strange behaviour of some native elements - looking at you _button_! */
   border-color: hsla({{ .css.colors.borderColor.hue }}, {{ .css.colors.borderColor.saturation }}, {{ .css.colors.borderColor.lightness }}, {{ .css.colors.borderColor.alpha }});
+  /* text-decoration-color: hsla({{ .css.colors.primaryColor.hue }}, {{ .css.colors.primaryColor.saturation }}, {{ .css.colors.primaryColor.lightness }}, {{ .css.colors.primaryColor.alpha }}); */
   /* border: solid 1px red; */
   transition-duration: 0.1s;
 }
