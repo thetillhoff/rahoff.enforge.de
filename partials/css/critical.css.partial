@@ -53,10 +53,7 @@ p {
 
 #page {
   width: 100%;
-}
-
-.fillRemaining {
-  flex-grow: 1;
+  margin-bottom: auto;
 }
 
 {{ template "helpers.css" . }}

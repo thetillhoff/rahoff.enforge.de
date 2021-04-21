@@ -64,10 +64,7 @@
     
     #page {
       width: 100%;
-    }
-    
-    .fillRemaining {
-      flex-grow: 1;
+      margin-bottom: auto;
     }
     
     .hidden {
@@ -119,6 +116,11 @@
       text-decoration: none;
     }
     
+    .active {
+      color: hsla(240, 100%, 50%, 1);
+      background-color: hsla(240, 100%, 90%, 1);
+    }
+    
     .bordered {
       border-width: 2px;
       border-radius: 5px;
@@ -156,7 +158,7 @@
     }
     a.primary:hover, a.primary:focus,
     .a.primary:hover .a.primary:focus {
-      background-color: hsla(0, 0%, 80%, 1);
+      background-color: hsla(240, 100%, 110%, 1);
     }
     a.primary.inverted:hover, a.primary.inverted:focus,
     .a.primary.inverted:hover, .a.primary.inverted:focus {
@@ -357,7 +359,7 @@
     button.primary,
     .primary.button {
       color: hsla(240,100%,50%,1);
-      background-color: hsla(0,0%,60%,1);
+      background-color: hsla(240,100%,90%,1);
     }
     
     /* hover button styling */
@@ -371,7 +373,7 @@
     }
     button.primary:hover, button.primary:focus,
     .button.primary:hover, .button.primary:focus {
-      background-color: hsla(0, 0%, 80%, 1);
+      background-color: hsla(240, 100%, 110%, 1);
     }
     button.primary.inverted:hover, button.primary.inverted:focus,
     .button.primary.inverted:hover, .button.primary.inverted:focus {
@@ -633,8 +635,6 @@
       
       </div>
     </div>
-
-    <div class="fillRemaining"></div>
 
 
     <footer>

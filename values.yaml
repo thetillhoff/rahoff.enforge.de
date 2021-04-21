@@ -14,9 +14,9 @@ css:
       alpha: 1
     
     primaryBgColor:
-      hue: 0
-      saturation: 0%
-      lightness: 60%
+      hue: 240
+      saturation: 100%
+      lightness: 90%
       alpha: 1
     
     siteColor:
