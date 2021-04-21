@@ -1,5 +1,11 @@
 {{ define "page" -}}
 <div class="container">
+
+  Zurück zu:
+  {{- range $key, $value := .breadcrumbs }}
+  <a href="{{ $value }}">{{ $key | capitalize }}</a>
+  {{- end }}
+
   <h1>
     Ringe
   </h1>
