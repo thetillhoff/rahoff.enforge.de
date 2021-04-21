@@ -4,11 +4,30 @@
     <a class="logo" href="/">
       <img src="/images/rahoff-scale-1.svg" alt="RaHoff"></img>
     </a>
-    <button class="huge icon button" onclick="togglePageNavigation();">
-      <svg viewBox="0 0 400 250">
-        <use xlink:href="#three-stripes"></use>
-      </svg>
-    </button>
+    <div id="mobileNavigation">
+      <button class="huge icon button" onclick="togglePageNavigation();">
+        <svg viewBox="0 0 400 250">
+          <use xlink:href="#three-stripes"></use>
+        </svg>
+      </button>
+    </div>
+    <div id="desktopNavigation">
+      <a class="element" href="/schmuck">
+        💍 Schmuck
+      </a>
+      <a class="element" href="/bilder">
+        🎨 Bilder
+      </a>
+      <a class="element" href="/skulpturen">
+        🔨 Skulpturen
+      </a>
+      <a class="element" href="/elektroauto">
+        ⚡ Elektroauto
+      </a>
+      <a class="element" href="mailto:rahoff@email.de?subject=[rahoff.enforge.de] Anfrage" target="_blank" rel="noopener nofollow noreferrer">
+        ✉ Kontakt
+      </a>
+    </div>
   </div>
 </div>
 <div id="pageNavigation" class="hidden vertical navigation menu">

@@ -12,6 +12,23 @@
   border-bottom: 2px solid;
 }
 
+@media only screen and (max-width: calc({{ .css.containerwidth }} - 0.01px)) {
+  #mobileNavigation {
+    display: inherit;
+  }
+  #desktopNavigation {
+    display: none;
+  }
+}
+@media only screen and (min-width: {{ .css.containerwidth }}) {
+  #mobileNavigation {
+    display: none;
+  }
+  #desktopNavigation {
+    display: inherit;
+  }
+}
+
 .navigation > .container {
   display: flex;
   justify-content: space-between;
