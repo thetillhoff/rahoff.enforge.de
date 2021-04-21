@@ -1,5 +1,5 @@
 {{ define "dimmer.html" -}}
 <div id="overlay-loader" class="centered-content dimmed overlay">
-  <img id="loader" src="/images/loader.svg" alt="loading..."></img>
+  <img src="/images/loader.svg" alt="loading..."></img>
 </div>
 {{- end }}
