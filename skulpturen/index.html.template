@@ -6,7 +6,7 @@
   </h1>
 
   <div class="center vertical spaced">
-    <span>Dieser Teil der Webseite befindet sich noch im Aufbau. Schau doch gerne sp&auml;ter nochmal vorbei!</span>
+    <span>Hier gibt es bisher noch keine Inhalte. Schau doch gerne sp&auml;ter nochmal vorbei!</span>
   </div>
 </div>
 {{- end }}
