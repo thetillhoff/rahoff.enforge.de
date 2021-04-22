@@ -3,30 +3,26 @@
   display: none !important;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-}
-
+.container,
 .text-container {
   margin-left: auto;
   margin-right: auto;
+}
+.text-container {
   max-width: 50rem;
 }
 
-.centered-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.vcentered-content {
-  display: flex;
-  justify-content: center;
-}
-
+.centered-content,
+.vcentered-content,
 .hcentered-content {
   display: flex;
+}
+.centered-content,
+.vcentered-content {
+  justify-content: center;
+}
+.centered-content,
+.hcentered-content {
   align-items: center;
 }
 
@@ -34,7 +30,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .vertical.spaced > * {
   margin-top: 1rem;
 }
