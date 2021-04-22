@@ -25,9 +25,7 @@
 
 {{ include "navigation.html" . | nindent 4 | safeHTML }}
 
-    <div id="page">
-{{ include "page" . | nindent 6 | safeHTML }}
-    </div>
+{{ include "page" . | nindent 4 | safeHTML }}
 
 {{ include "footer.html" . | nindent 4 | safeHTML }}
   </body>

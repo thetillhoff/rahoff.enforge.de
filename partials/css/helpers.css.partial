@@ -8,9 +8,25 @@
   margin-right: auto;
 }
 
+.text-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50rem;
+}
+
 .centered-content {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.vcentered-content {
+  display: flex;
+  justify-content: center;
+}
+
+.hcentered-content {
+  display: flex;
   align-items: center;
 }
 
@@ -62,7 +78,7 @@ a.nolink:visited {
 }
 
 .slightly-padded {
-  padding: 0.5em;
+  padding: 0.75rem;
 }
 
 .article-grid {
@@ -98,13 +114,13 @@ a.primary.inverted:hover, a.primary.inverted:focus,
 }
 
 @media only screen and (max-width: calc({{ .css.containerwidth }} - 0.01px)) {
-  .container {
+  .container, .text-container {
     width: 90vw; /* occurs 1x directly below as well */
   }
 }
 @media only screen and (min-width: {{ .css.containerwidth }}) {
-  .container {
-    width: calc(0.90 * {{ .css.containerwidth }}); /* occurs 1x dircelty above as well */
+  .container, .text-container {
+    width: calc(0.90 * {{ .css.containerwidth }}); /* occurs 1x directly above as well */
   }
 }
 {{- end }}

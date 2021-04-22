@@ -1,5 +1,7 @@
-{{ define "page" -}}
+{{ define "content" -}}
 <div class="container">
+
+{{ include "breadcrumbs.html" . | nindent 4 | safeHTML }}
 
   <h1>
     {{ .Item.Typ }} {{ .Item.Name }}

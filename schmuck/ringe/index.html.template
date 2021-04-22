@@ -1,10 +1,7 @@
-{{ define "page" -}}
+{{ define "content" -}}
 <div class="container">
 
-  Zurück zu:
-  {{- range $key, $value := .breadcrumbs }}
-  <a href="{{ $value }}">{{ $key | capitalize }}</a>
-  {{- end }}
+  {{ include "breadcrumbs.html" . | nindent 4 | safeHTML }}
 
   <h1>
     Ringe

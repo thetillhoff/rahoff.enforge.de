@@ -1,0 +1,6 @@
+{{ define "breadcrumbs.html" -}}
+Zurück zu:
+{{- range $crumb := .breadcrumbs }}
+/ <a href="{{ $crumb.Path }}">{{ $crumb.Name | capitalize }}</a>
+{{- end }}
+{{ end }}

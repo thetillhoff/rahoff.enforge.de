@@ -1,4 +1,4 @@
-{{ define "page" -}}
+{{ define "content" -}}
 <div class="container">
   <h1>
     Datenschutz

@@ -1,0 +1,5 @@
+{{ define "page" -}}
+<div id="page">
+  {{ include "content" . | nindent 2 | safeHTML }}
+</div>
+{{- end }}

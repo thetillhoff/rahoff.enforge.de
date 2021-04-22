@@ -4,6 +4,7 @@ css:
 
   generalsize: 1rem # size of elements
   fontsize: 1rem
+  lineheight: 1.5
   containerwidth: 1150px # defines the max-width of containers
 
   colors:
