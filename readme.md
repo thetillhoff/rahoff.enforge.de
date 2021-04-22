@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/254c6722-e9ea-477b-b4cd-fddf210c60f4/deploy-status)](https://app.netlify.com/sites/rahoff/deploys)
+
 # rahoff.enforge.de
 
 ## what this is about
