@@ -4,8 +4,21 @@
     Elektroauto
   </h1>
 
+  {{ if list -}}
+  <div class="article-grid">
+    {{ range list -}}
+    <a href="{{ .Path }}" class="vertical bordered outer-border slightly-padded article">
+      <div class="expanding">
+        <img src="/images/{{ .Name | urlize }}/{{ .Hauptbild }}">
+      </div>
+      <span>{{ .Name }}</span>
+      </a>
+    {{- end }}
+  </div>
+  {{ else -}}
   <div class="center vertical spaced">
     <span>Hier gibt es bisher noch keine Inhalte. Schau doch gerne sp&auml;ter nochmal vorbei!</span>
   </div>
+  {{- end }}
 </div>
 {{- end }}
