@@ -11,15 +11,33 @@ tasks:
   build:
     desc: Build the files / templating
     cmds:
-      - ../temingo/temingo{{ exeExt }} --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --staticDir static --templateExtension .template --partialExtension .partial{{ if eq .DEBUG "true" }} --debug{{ end }}
+      - .temingo{{ exeExt }} --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --staticDir static --templateExtension .template --partialExtension .partial{{ if eq .DEBUG "true" }} --debug{{ end }}
 
   watch: # go-task could do this as well, but I've implemented in the code itself (for completeness: https://taskfile.dev/#/usage?id=watch-tasks)
     desc: Watching the templates & rebuilding when changes occur
     cmds:
       - task build{{ if eq .DEBUG "true" }} DEBUG=true{{ end }}
-      - ../temingo/temingo{{ exeExt }} --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --staticDir static --templateExtension .template --partialExtension .partial --watch{{ if eq .DEBUG "true" }} --debug{{ end }}
+      - .temingo{{ exeExt }} --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --staticDir static --templateExtension .template --partialExtension .partial --watch{{ if eq .DEBUG "true" }} --debug{{ end }}
 
   serve:
+    desc: Start the dev-server
+    dir: output
+    cmds:
+      - ./serve{{ exeExt }}{{ if eq .DEBUG "true" }} --debug{{ end }}
+
+
+  dev:build:
+    desc: Build the files / templating
+    cmds:
+      - ../temingo/temingo{{ exeExt }} --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --staticDir static --templateExtension .template --partialExtension .partial{{ if eq .DEBUG "true" }} --debug{{ end }}
+
+  dev:watch: # go-task could do this as well, but I've implemented in the code itself (for completeness: https://taskfile.dev/#/usage?id=watch-tasks)
+    desc: Watching the templates & rebuilding when changes occur
+    cmds:
+      - task build{{ if eq .DEBUG "true" }} DEBUG=true{{ end }}
+      - ../temingo/temingo{{ exeExt }} --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --staticDir static --templateExtension .template --partialExtension .partial --watch{{ if eq .DEBUG "true" }} --debug{{ end }}
+
+  dev:serve:
     desc: Start the dev-server
     dir: output
     cmds:
