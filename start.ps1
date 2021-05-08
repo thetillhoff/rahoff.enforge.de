@@ -15,3 +15,5 @@ echo "serve - check!"
 
 code . # start vscode
 echo "vscode - check!"
+
+exit
