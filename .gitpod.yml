@@ -1,10 +1,14 @@
 image:
   file: Dockerfile
 tasks:
-  - before: clear && chmod +x /workspace/rahoff.enforge.de/.gitpod/before.sh && /workspace/rahoff.enforge.de/.gitpod/before.sh && exit
-  - command: clear && task serve
-    openIn: main
-  - command: clear && printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"". && task watch
+  - before: |
+      clear \
+      && git -C /workspace clone https://github.com/tillhoff/serve \
+      && task -d /workspace/serve build \
+      && git -C /workspace clone https://github.com/tillhoff/temingo \
+      && task -d /workspace/temingo build
+    command: clear && task serve
+  - command: clear && printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"". && sleep 2 && task watch
     openIn: main
 ports:
   - port: 3000
