@@ -1,12 +1,10 @@
 image:
   file: Dockerfile
 tasks:
-  - before: clear && .gitpod/before.sh
+  - before: clear && .gitpod/before.sh && exit
   - command: clear && task serve
     openIn: main
-  - command: clear && task watch
-    openIn: main
-  - command: clear && printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"".
+  - command: clear && printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"". && task watch
     openIn: main
 ports:
   - port: 3000
