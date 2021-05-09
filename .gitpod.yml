@@ -1,8 +1,8 @@
 image:
   file: Dockerfile
 tasks:
-  - command: clear && wget https://github.com/tillhoff/serve/releases/download/v0.0.2/serve_linux_amd64 -O /opt/serve && chmod +x /opt/serve && task serve
-  - command: clear && wget https://github.com/tillhoff/temingo/releases/download/v0.0.1/temingo_linux_amd64 -O /opt/temingo && chmod +x /opt/temingo && printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"". && task watch
+  - command: clear && sudo wget https://github.com/tillhoff/serve/releases/download/v0.0.2/serve_linux_amd64 -O /opt/serve && sudo chmod +x /opt/serve && task serve
+  - command: clear && sudo wget https://github.com/tillhoff/temingo/releases/download/v0.0.1/temingo_linux_amd64 -O /opt/temingo && sudo chmod +x /opt/temingo && printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"". && task watch
 ports:
   - port: 3000
     
