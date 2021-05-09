@@ -14,7 +14,7 @@ tasks:
     openIn: main
   - command: task watch
     openIn: main
-  - command: You can access port 3000 of this gitpod via "$(gp url 3000)".
+  - command: printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"".
     openIn: main
 ports:
   - port: 3000
