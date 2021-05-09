@@ -1,15 +1,18 @@
 tasks:
-  - before: sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -b /usr/local/bin
+  - before: |
+      sudo sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -b /usr/local/bin
+      exit
   - init: |
-      if [[ ! -f ../serve/serve ]]; then
-        git clone https://github.com/tillhoff/serve ../serve
-        cd ../serve && task build
+      if [[ ! -f /workspace/serve/serve ]]; then
+        git clone https://github.com/tillhoff/serve /workspace/serve
+        cd /workspace/serve && task build
       fi
 
-      if [[ ! -f ../temingo/temingo ]]; then
-        git clone https://github.com/tillhoff/temingo.. /temingo
-        cd ../temingo && task build
+      if [[ ! -f /workspace/temingo/temingo ]]; then
+        git clone https://github.com/tillhoff/temingo.. /workspace/temingo
+        cd /workspace/temingo && task build
       fi
+      exit
   - command: task serve
     openIn: main
   - command: task watch
