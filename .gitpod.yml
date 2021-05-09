@@ -1,14 +1,9 @@
 image:
   file: Dockerfile
 tasks:
-  - before: |
-      clear \
-      && git -C /workspace clone https://github.com/tillhoff/serve \
-      && task -d /workspace/serve build \
-      && git -C /workspace clone https://github.com/tillhoff/temingo \
-      && task -d /workspace/temingo build
+  - before: clear && task init
     command: clear && task serve
-  - command: clear && printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"". && sleep 2 && task watch
+  - command: clear && printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"". && sleep 5 && task watch
     openIn: main
 ports:
   - port: 3000

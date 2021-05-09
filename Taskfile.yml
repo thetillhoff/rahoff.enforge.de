@@ -9,6 +9,11 @@ vars:
 
 tasks:
 
+  init:
+    desc: Quickstart dev-setup
+    cmds:
+      - git submodule init
+
   build:
     desc: Build the files / templating
     cmds:

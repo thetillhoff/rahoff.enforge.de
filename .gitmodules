@@ -1,0 +1,6 @@
+[submodule ".dev/serve"]
+	path = .dev/serve
+	url = https://github.com/tillhoff/serve
+[submodule ".dev/temingo"]
+	path = .dev/temingo
+	url = https://github.com/tillhoff/temingo
