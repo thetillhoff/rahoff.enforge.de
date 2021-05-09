@@ -1,16 +1,17 @@
+image:
+  file: Dockerfile
 tasks:
   - before: |
       sudo sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -b /usr/local/bin
       exit
   - init: |
       if [[ ! -f /workspace/serve/serve ]]; then
-        git clone https://github.com/tillhoff/serve /workspace/serve
-        cd /workspace/serve && task build
+        git clone https://github.com/tillhoff/serve /workspace/serve && cd /workspace/serve && task build
       fi
-
+      exit
+  - init: |
       if [[ ! -f /workspace/temingo/temingo ]]; then
-        git clone https://github.com/tillhoff/temingo.. /workspace/temingo
-        cd /workspace/temingo && task build
+        git clone https://github.com/tillhoff/temingo.. /workspace/temingo && cd /workspace/temingo && task build
       fi
       exit
   - command: task serve
