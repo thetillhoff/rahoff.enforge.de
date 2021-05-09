@@ -1,24 +1,12 @@
 image:
   file: Dockerfile
 tasks:
-  - before: |
-      sudo sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -b /usr/local/bin
-      exit
-  - init: |
-      if [[ ! -f /workspace/serve/serve ]]; then
-        git clone https://github.com/tillhoff/serve /workspace/serve && cd /workspace/serve && task build
-      fi
-      exit
-  - init: |
-      if [[ ! -f /workspace/temingo/temingo ]]; then
-        git clone https://github.com/tillhoff/temingo.. /workspace/temingo && cd /workspace/temingo && task build
-      fi
-      exit
-  - command: task serve
+  - before: clear && .gitpod/before.sh
+  - command: clear && task serve
     openIn: main
-  - command: task watch
+  - command: clear && task watch
     openIn: main
-  - command: printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"".
+  - command: clear && printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"".
     openIn: main
 ports:
   - port: 3000
