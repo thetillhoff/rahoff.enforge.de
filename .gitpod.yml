@@ -1,7 +1,7 @@
 image:
   file: Dockerfile
 tasks:
-  - before: clear && .gitpod/before.sh && exit
+  - before: clear && chmod +x /workspace/rahoff.enforge.de/.gitpod/before.sh && /workspace/rahoff.enforge.de/.gitpod/before.sh && exit
   - command: clear && task serve
     openIn: main
   - command: clear && printf "%s\n" "You can access port 3000 of this gitpod via \"$(gp url 3000)\"". && task watch
