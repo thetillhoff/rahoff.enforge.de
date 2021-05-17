@@ -14,6 +14,11 @@ tasks:
     cmds:
       - /opt/temingo --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --staticDir static --templateExtension .template --partialExtension .partial{{ if eq .DEBUG "true" }} --debug{{ end }}
 
+  dev:build:
+    desc: Build the files / templating with temingo in sibling-folder
+    cmds:
+      - ../temingo/temingo --valuesfile values.yaml --inputDir . --partialsDir partials --outputDir output --staticDir static --templateExtension .template --partialExtension .partial{{ if eq .DEBUG "true" }} --debug{{ end }}
+
   watch: # go-task could do this as well, but I've implemented in the code itself (for completeness: https://taskfile.dev/#/usage?id=watch-tasks)
     desc: Watching the templates & rebuilding when changes occur
     cmds:
@@ -25,3 +30,9 @@ tasks:
     dir: output
     cmds:
       - /opt/serve{{ if eq .DEBUG "true" }} --debug{{ end }}
+
+  dev:serve:
+    desc: Start the dev-server
+    dir: output
+    cmds:
+      - ../../serve/serve{{ if eq .DEBUG "true" }} --debug{{ end }}
