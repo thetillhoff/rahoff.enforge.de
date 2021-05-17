@@ -1,1 +1,6 @@
-*
+/.gitpod.yml
+/Dockerfile
+/netlify.toml
+/readme.md
+/Taskfile.yml
+/values.yaml
