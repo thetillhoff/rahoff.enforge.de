@@ -1,5 +1,8 @@
 {{ define "content" -}}
 <div class="container">
+
+  {{ include "breadcrumbs.html" . | nindent 4 | safeHTML }}
+
   <h1>
     Impressum
   </h1>
