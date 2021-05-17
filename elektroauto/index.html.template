@@ -1,22 +1,13 @@
 {{ define "content" -}}
 <div class="container">
+
+  {{ include "breadcrumbs.html" . | nindent 4 | safeHTML }}
+
   <h1>
     Elektroauto
   </h1>
 
-  {{ if list -}}
-  <div class="article-grid">
-    {{ range list -}}
-    <a href="{{ .Path }}" class="vertical bordered outer-border slightly-padded article">
-      <img src="/images/{{ .Name | urlize }}/{{ .Hauptbild }}">
-      <span>{{ .Name }}</span>
-      </a>
-    {{- end }}
-  </div>
-  {{ else -}}
-  <div class="center vertical spaced">
-    <span>Hier gibt es bisher noch keine Inhalte. Schau doch gerne sp&auml;ter nochmal vorbei!</span>
-  </div>
-  {{- end }}
+  {{ include "default-listview.html" . | nindent 2 | safeHTML }}
 </div>
+
 {{- end }}

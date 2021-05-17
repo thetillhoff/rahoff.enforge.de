@@ -1,34 +1,3 @@
 {{ define "content" -}}
-<div class="container">
-
-  {{ include "breadcrumbs.html" . | nindent 4 | safeHTML }}
-
-  <h1>
-    {{ .Item.Typ }} {{ .Item.Name }}
-  </h1>
-
-  <div class="bordered outer-border slightly-padded article">
-
-    <img id="currentGalleryImage" src="/images/{{ .Item.Name | urlize }}/{{ .Item.Hauptbild }}"/>
-
-    <br/>
-
-    <div class="buttons">
-      {{ range .Item.Bilder -}}
-      <button class="huge image galleryImageButton" onclick="displayThisGalleryImage(this);">
-        <img src="/images/{{ $.Item.Name | urlize }}/{{ . }}">
-      </button>
-      {{- end}}
-    </div>
-
-    <br/>
-    <br/>
-
-    <p>
-      {{ .Item.Beschreibung | safeHTML }}
-    </p>
-
-  </div>
-
-</div>
+{{ include "default-singleview.html" . | safeHTML }}
 {{- end }}
