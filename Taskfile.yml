@@ -29,10 +29,10 @@ tasks:
     desc: Start the dev-server
     dir: output
     cmds:
-      - /opt/serve{{ if eq .DEBUG "true" }} --debug{{ end }}
+      - /opt/serve{{ if eq .DEBUG "true" }} --port 3000 --debug{{ end }}
 
   dev:serve:
     desc: Start the dev-server
     dir: output
     cmds:
-      - ../../serve/serve{{ if eq .DEBUG "true" }} --debug{{ end }}
+      - ../../serve/serve{{ if eq .DEBUG "true" }} --port 3000 --debug{{ end }}
