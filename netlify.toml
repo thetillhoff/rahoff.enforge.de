@@ -26,16 +26,20 @@
         Referrer-Policy = "no-referrer"
         # Configure feature usage.
         Feature-Policy = """
-            camera none;
-            geolocation none;
-            gyroscope none;
-            fullscreen self;
-            magnetometer none;
-            microphone none;
-            midi none;
-            notifications none;
-            push none;
-            speaker none;
-            sync-xhr none;
-            vibrate none;
+            accelerometer 'none';
+            ambient-light-sensor 'none';
+            camera 'none';
+            display-capture 'none';
+            fullscreen 'self';
+            geolocation 'none';
+            gyroscope 'none';
+            magnetometer 'none';
+            microphone 'none';
+            midi 'none';
+            notifications 'none';
+            payment 'none';
+            push 'none';
+            speaker 'none';
+            sync-xhr 'none';
+            usb 'none;
         """
