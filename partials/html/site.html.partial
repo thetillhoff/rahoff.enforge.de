@@ -28,5 +28,6 @@
 {{ include "page" . | nindent 4 | safeHTML }}
 
 {{ include "footer.html" . | nindent 4 | safeHTML }}
+    <script async defer data-domain="rahoff.enforge.de" src="https://analytics.enforge.de/js/plausible.js"></script>
   </body>
 </html>
