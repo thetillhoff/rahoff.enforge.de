@@ -27,19 +27,14 @@
         # Configure feature usage.
         Feature-Policy = """
             accelerometer 'none';
-            ambient-light-sensor 'none';
             camera 'none';
-            display-capture 'none';
             fullscreen 'self';
             geolocation 'none';
             gyroscope 'none';
             magnetometer 'none';
             microphone 'none';
             midi 'none';
-            notifications 'none';
             payment 'none';
-            push 'none';
-            speaker 'none';
             sync-xhr 'none';
-            usb 'none;
+            usb 'none';
         """
