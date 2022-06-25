@@ -1,3 +1,0 @@
-{{ define "content" -}}
-{{ include "default-singleview.html" . | safeHTML }}
-{{- end }}
