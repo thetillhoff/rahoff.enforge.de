@@ -26,7 +26,7 @@
 {/if}
   
 <style>
-  .overlay {
+  :global(.overlay) {
     position: fixed;
     visibility: hidden;
 
@@ -41,7 +41,7 @@
     background-color: hsla(240, 100%, 50%, 1);
   }
 
-  .content {
+  :global(.content) {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -50,7 +50,7 @@
     background-color: rgba(255,255,255,0.9); /* Black background with opacity */
   }
 
-  .visible {
+  :global(.visible) {
     animation: slide-menu 2s ease-in-out 1 forwards;
   }
 

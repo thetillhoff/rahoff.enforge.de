@@ -99,19 +99,19 @@ button.borderless {
 }
 
 /* contains multiple buttons */
-.buttons > button {
+:global(.buttons) > button {
   margin-left: 0.5rem;
 }
-.buttons > button.large {
+:global(.buttons) > button.large {
   margin-left: calc(0.5rem * 1.2);
 }
-.buttons > button.big {
+:global(.buttons) > button.big {
   margin-left: calc(0.5rem * 1.4);
 }
-.buttons > button.huge {
+:global(.buttons) > button.huge {
   margin-left: calc(0.5rem * 1.6);
 }
-.buttons > button:first-child {
+:global(.buttons) > button:first-child {
   margin-left: 0;
 }
 

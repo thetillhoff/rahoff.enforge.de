@@ -7,17 +7,11 @@ This contains the website hosted on rahoff.enforge.de. It's more of a private pr
 
 ## How to get started
 
-- `npm init svelte <projectname>`
-  template: skeleton
-  types: checkjs
-  eslint: true
-  prettier: true
-  playwright: false
+- `npm create vite@latest`
+  framework: svelte
+  template: demo
+  type: sveltekit
+  additional packages: eslint, prettier
 - `cp <projectname>/* ./ && rm -d <projectname>`
 - `npm install`
 - `npm run dev` || `npm run build`
----
-- `npm create vite@latest <projectname> --template svelte`
-- `cp <projectname>/* ./ && rm -d <projectname>`
-- `npm install`
-- `npx vite` -> for development | `npx vite build` -> for prod build

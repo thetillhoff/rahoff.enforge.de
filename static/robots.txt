@@ -1,4 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /impressum
 Disallow: /datenschutz
-#Sitemap: https://rahoff.enforge.de
