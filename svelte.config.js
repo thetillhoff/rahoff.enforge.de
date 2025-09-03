@@ -1,5 +1,5 @@
 import adapter from '@sveltejs/adapter-netlify';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,8 +8,8 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-			// default options are shown
-			adapter: adapter({
+		// default options are shown
+		adapter: adapter({
 			// if true, will create a Netlify Edge Function rather
 			// than using standard Node-based functions
 			edge: false,

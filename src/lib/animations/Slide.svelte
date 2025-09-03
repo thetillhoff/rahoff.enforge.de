@@ -3,5 +3,5 @@
 </script>
 
 <div transition:slide>
-  <slot></slot>
+	<slot></slot>
 </div>
