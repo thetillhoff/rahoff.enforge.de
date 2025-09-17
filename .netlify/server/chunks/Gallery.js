@@ -1,61 +1,45 @@
-import {
-	c as create_ssr_component,
-	v as validate_component,
-	b as add_attribute,
-	h as each
-} from './ssr.js';
-import { C as Container } from './Container.js';
-const Gallery_svelte_svelte_type_style_lang = '';
-const css = {
-	code: 'div.svelte-y9woxz{width:100%;margin-bottom:1rem}img{border-radius:5px}.galleryMain.svelte-y9woxz img{width:100%}.galleryList img{height:4rem}',
-	map: null
+import { Q as sanitize_props, N as push, T as fallback, V as attr, a5 as ensure_array_like, _ as bind_props, P as pop } from "./index.js";
+import { C as Container } from "./Container.js";
+function html(value) {
+  var html2 = String(value ?? "");
+  var open = "<!---->";
+  return open + html2 + "<!---->";
+}
+function Gallery($$payload, $$props) {
+  const $$sanitized_props = sanitize_props($$props);
+  push();
+  let mainImageSource = fallback($$props["mainImageSource"], "");
+  let galleryImageSources = fallback($$props["galleryImageSources"], () => [""], true);
+  Container($$payload, {
+    id: $$sanitized_props.id,
+    class: $$sanitized_props.class,
+    style: $$sanitized_props.style,
+    vertical: true,
+    fullWidth: true,
+    children: ($$payload2) => {
+      $$payload2.out.push(`<div class="galleryMain svelte-jj5ub7"><img${attr("src", mainImageSource)} alt="Active entry of the gallery"/></div> `);
+      Container($$payload2, {
+        class: "galleryList",
+        spaced: true,
+        children: ($$payload3) => {
+          const each_array = ensure_array_like(galleryImageSources);
+          $$payload3.out.push(`<!--[-->`);
+          for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
+            let galleryImageSource = each_array[$$index];
+            $$payload3.out.push(`<img${attr("src", galleryImageSource)} alt="Entry in the gallery"/>`);
+          }
+          $$payload3.out.push(`<!--]-->`);
+        },
+        $$slots: { default: true }
+      });
+      $$payload2.out.push(`<!---->`);
+    },
+    $$slots: { default: true }
+  });
+  bind_props($$props, { mainImageSource, galleryImageSources });
+  pop();
+}
+export {
+  Gallery as G,
+  html as h
 };
-const Gallery = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	let { mainImageSource = '' } = $$props;
-	let { galleryImageSources = [''] } = $$props;
-	let galleryImage;
-	if (
-		$$props.mainImageSource === void 0 &&
-		$$bindings.mainImageSource &&
-		mainImageSource !== void 0
-	)
-		$$bindings.mainImageSource(mainImageSource);
-	if (
-		$$props.galleryImageSources === void 0 &&
-		$$bindings.galleryImageSources &&
-		galleryImageSources !== void 0
-	)
-		$$bindings.galleryImageSources(galleryImageSources);
-	$$result.css.add(css);
-	return `${validate_component(Container, 'Container').$$render(
-		$$result,
-		{
-			id: $$props.id,
-			class: $$props.class,
-			style: $$props.style,
-			vertical: true,
-			fullWidth: true
-		},
-		{},
-		{
-			default: () => {
-				return `<div class="galleryMain svelte-y9woxz"><img${add_attribute('src', mainImageSource, 0)} alt="Active entry of the gallery"${add_attribute('this', galleryImage, 0)}></div> ${validate_component(
-					Container,
-					'Container'
-				).$$render(
-					$$result,
-					{ class: 'galleryList', spaced: true },
-					{},
-					{
-						default: () => {
-							return `${each(galleryImageSources, (galleryImageSource) => {
-								return `<img${add_attribute('src', galleryImageSource, 0)} alt="Entry in the gallery">`;
-							})}`;
-						}
-					}
-				)}`;
-			}
-		}
-	)}`;
-});
-export { Gallery as G };

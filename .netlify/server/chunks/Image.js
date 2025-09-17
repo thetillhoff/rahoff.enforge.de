@@ -1,19 +1,14 @@
-import {
-	c as create_ssr_component,
-	b as add_attribute,
-	e as escape,
-	d as null_to_empty
-} from './ssr.js';
-/* empty css                                     */ const css = {
-	code: 'img.svelte-1y1o7c8{height:100%;max-width:100%;display:block;object-fit:cover}',
-	map: null
+import { Q as sanitize_props, N as push, T as fallback, V as attr, W as attr_class, X as attr_style, Y as clsx, _ as bind_props, P as pop } from "./index.js";
+/* empty css                                    */
+function Image($$payload, $$props) {
+  const $$sanitized_props = sanitize_props($$props);
+  push();
+  let src = fallback($$props["src"], "");
+  let alt = fallback($$props["alt"], "");
+  $$payload.out.push(`<img${attr("id", $$sanitized_props.id)}${attr_class(clsx($$sanitized_props.class), "svelte-rq7fm0")}${attr_style($$sanitized_props.style)}${attr("src", src)}${attr("alt", alt)}/>`);
+  bind_props($$props, { src, alt });
+  pop();
+}
+export {
+  Image as I
 };
-const Image = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	let { src = '' } = $$props;
-	let { alt = '' } = $$props;
-	if ($$props.src === void 0 && $$bindings.src && src !== void 0) $$bindings.src(src);
-	if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0) $$bindings.alt(alt);
-	$$result.css.add(css);
-	return `<img${add_attribute('id', $$props.id, 0)} class="${escape(null_to_empty($$props.class), true) + ' svelte-1y1o7c8'}"${add_attribute('style', $$props.style, 0)}${add_attribute('src', src, 0)}${add_attribute('alt', alt, 0)}>`;
-});
-export { Image as I };

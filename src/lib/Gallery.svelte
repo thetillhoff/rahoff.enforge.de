@@ -1,7 +1,6 @@
 <script>
 	import Container from '$lib/Container.svelte';
 	import { onMount } from 'svelte';
-	import { self } from 'svelte/internal';
 
 	export let mainImageSource = '';
 	export let galleryImageSources = [''];
@@ -15,18 +14,17 @@
 	</div>
 	<Container class="galleryList" spaced>
 		{#each galleryImageSources as galleryImageSource}
-			<img
-				src={galleryImageSource}
-				alt="Entry in the gallery"
-				on:mousemove={(e) => {
-					e;
-				}}
-				on:click={(e) => {
-					if (galleryImage.src != e.target.src) {
-						galleryImage.src = e.target.src;
+			<button
+				type="button"
+				class="gallery-thumbnail"
+				on:click={() => {
+					if (galleryImage.src != galleryImageSource) {
+						galleryImage.src = galleryImageSource;
 					}
 				}}
-			/>
+			>
+				<img src={galleryImageSource} alt="Entry in the gallery" />
+			</button>
 		{/each}
 	</Container>
 </Container>
@@ -41,11 +39,36 @@
 		border-radius: 5px;
 	}
 
-	.galleryMain :global(img) {
-		width: 100%;
+	.galleryMain {
+		height: 20rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
-	:global(.galleryList) :global(img) {
+	.galleryMain :global(img) {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+		object-position: center;
+	}
+
+	:global(.galleryList) :global(.gallery-thumbnail) {
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		width: 100%;
 		height: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	:global(.galleryList) :global(.gallery-thumbnail img) {
+		max-height: 100%;
+		max-width: 100%;
+		object-fit: contain;
+		object-position: center;
 	}
 </style>
