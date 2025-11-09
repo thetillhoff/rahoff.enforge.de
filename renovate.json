@@ -1,17 +1,17 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"schedule": ["every weekend"],
-	"extends": ["config:base", ":disableDependencyDashboard"],
-	"postUpdateOptions": ["gomodTidy"],
-	"packageRules": [
-		{
-			"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-			"matchCurrentVersion": "!/^0/",
-			"automerge": true
-		},
-		{
-			"matchUpdateTypes": ["major"],
-			"automerge": false
-		}
-	]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "schedule": ["every weekend"],
+  "extends": ["config:best-practices", ":disableDependencyDashboard"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
 }
