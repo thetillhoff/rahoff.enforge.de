@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@fontsource/fira-mono": "5.2.7",
 		"@neoconfetti/svelte": "2.2.2",
-		"@sveltejs/adapter-auto": "6.1.1",
+		"@sveltejs/adapter-auto": "7.0.1",
 		"@sveltejs/adapter-netlify": "5.2.4",
 		"@sveltejs/kit": "2.49.5",
 		"@typescript-eslint/eslint-plugin": "8.46.4",
